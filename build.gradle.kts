@@ -8,7 +8,7 @@ plugins {
 }
 buildscript {
     dependencies {
-        classpath(wings.conventions)
+        classpath(wings.gene.conventions)
     }
 }
 
