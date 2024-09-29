@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: publish plugin
+name: publish
 
 # Controls when the workflow will run
 on:
@@ -33,12 +33,29 @@ jobs:
           distribution: 'temurin'
 
       # Runs a single command using the runners shell
-      - name: 🔥 publishing plugin
+      - name: 🔥 publishing to MavenCentral
         run: |
           echo 🐛 如果遇到Error: Could not find or load main class org.gradle.wrapper.GradleWrapperMain
-          echo 💊 那么说明是因为gradle目录,gradlew文件没同步到github导致的,检查下是否此目录下有文件没上传
-          chmod +x gradlew
+          echo 💊 那么说明是因为gradle目录，gradlew文件没同步到github导致的,检查下是否此目录下有文件没上传
+          echo 💊 gradle-wrapper.jar检查是否存在
+          chmod +x ./gradlew
           ./gradlew publishToMavenCentral
         env:
-          GRADLE_PUBLISH_KEY: ${{ secrets.GRADLE_KEY }}
-          GRADLE_PUBLISH_SECRET: ${{ secrets.GRADLE_SECRET }}
+          SIGN_GPG_KEY: ${{ secrets.SIGN_GPG_KEY }}
+          SIGN_GPG_PASSWORD: ${{ secrets.SIGN_GPG_PASSWORD }}
+          mavenCentralUsername: ${{ secrets.MAVEN_NAME }}
+          mavenCentralPassword: ${{ secrets.MAVEN_PASSWORD }}
+          GITHUB_USER: ${{ secrets.NAME_GITHUB }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+
+      - run: echo "✨ ⭐ 🌟  The job finish release succeed. > 🚀"
+
+#      - name: Create key=value to local.properties
+#        run: |
+#          echo "apiKey=${{ secrets.API_KEY }}" > local.properties
+#
+#      - name: Read local.properties
+#        id: read_local_properties
+#        run: |
+#          apiKey=$(grep 'apiKey' local.properties | cut -d'=' -f2)
+#          echo "API_KEY=$apiKey" >> $GITHUB_ENV
