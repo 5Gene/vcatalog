@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "io.github.5hmlA"
-
+version = "24.09.30"
 
 
 gradlePlugin {

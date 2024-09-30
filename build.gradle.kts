@@ -28,6 +28,6 @@ publishing {
 }
 
 group = "io.github.5hmla"
-version = "24.09.29"
+version = "24.09.30"
 
 publishMavenCentral("version catalog", "versionCatalog", false)
