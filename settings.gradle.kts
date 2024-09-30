@@ -26,4 +26,5 @@ dependencyResolutionManagement {
     }
 }
 
+include(":gradle-plugin")
 rootProject.name = "vcatalog"
