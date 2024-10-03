@@ -10,8 +10,8 @@ class GradlePlugin : Plugin<Settings> {
         settings.gradle.settingsEvaluated {
             settings.dependencyResolutionManagement {
                 versionCatalogs {
-                    create("libs") {
-                        from("io.github.5hmla:vcatalog:24.09.29")
+                    create("vcl") {
+                        from("io.github.5hmla:vcatalog:24.10.01")
                     }
                 }
             }
