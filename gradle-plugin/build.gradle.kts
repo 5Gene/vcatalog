@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "io.github.5hmlA"
-version = "24.09.30"
+version = "24.10.01"
 
 
 gradlePlugin {
@@ -13,7 +13,7 @@ gradlePlugin {
     vcsUrl = "https://github.com/5Gene/vcatalog"
     plugins {
         register("vcatalog") {
-            id = "${group}.vc"
+            id = "${group}.vcl"
             displayName = "gracle version catalog"
             description = "gracle version catalog"
             tags = listOf("config", "versionCatalog", "convention")
