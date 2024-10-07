@@ -1,5 +1,3 @@
-import wing.publish5hmlA
-import wing.publishJava5hmlA
 import wing.publishMavenCentral
 
 plugins {
@@ -8,7 +6,7 @@ plugins {
 }
 buildscript {
     dependencies {
-        classpath(wings.gene.conventions)
+        classpath(libs.gene.conventions)
     }
 }
 
@@ -28,6 +26,6 @@ publishing {
 }
 
 group = "io.github.5hmla"
-version = "24.10.01"
+version = libs.versions.vcl.get()
 
 publishMavenCentral("version catalog", "versionCatalog", false)

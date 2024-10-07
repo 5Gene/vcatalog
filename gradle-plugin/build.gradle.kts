@@ -1,12 +1,11 @@
-
 plugins {
     `kotlin-dsl`
     id("com.gradle.plugin-publish")
 }
 
 group = "io.github.5hmlA"
-version = "24.10.01"
 
+version = libs.versions.vcl.get()
 
 gradlePlugin {
     website = "https://github.com/5Gene/vcatalog"

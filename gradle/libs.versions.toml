@@ -1,6 +1,8 @@
 #https://github.com/terrakok/kmp-awesome
 
 [versions]
+vcl = "24.10.01"
+
 android-compileSdk = "35"
 android-minSdk = "26"
 android-targetSdk = "35"
