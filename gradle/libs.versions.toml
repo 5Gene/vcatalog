@@ -2,6 +2,15 @@
 
 [versions]
 vcl = "24.10.01"
+cartoon = "1.0"
+cubic = "1.0"
+viewDsl = "1.0"
+adapter = "1.0"
+spark = "1.0"
+conventions = "2.1.10"
+auto-service-anno = "1.1.1"
+auto-service = "0.0.8"
+ksp-poe = "0.0.4"
 
 android-compileSdk = "35"
 android-minSdk = "26"
@@ -86,16 +95,6 @@ activity = "1.8.0"
 
 #https://github.com/terrakok/kmp-awesome
 
-cartoon = "1.0"
-cubic = "1.0"
-viewDsl = "1.0"
-adapter = "1.0"
-spark = "1.0"
-conventions = "2.1.10"
-auto-service-anno = "1.1.1"
-auto-service = "0.0.8"
-view-dsl = "0.0.1"
-ksp-poe = "0.0.4"
 
 [libraries]
 gene-auto-service = { module = "io.github.5hmla:auto-service", version.ref = "auto-service" }
