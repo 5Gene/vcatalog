@@ -20,7 +20,6 @@ android {
 }
 
 dependencies {
-
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.bundles.android.view)
     implementation(libs.bundles.android.basic)

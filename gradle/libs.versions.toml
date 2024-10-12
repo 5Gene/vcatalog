@@ -1,7 +1,7 @@
 #https://github.com/terrakok/kmp-awesome
 
 [versions]
-gene-vcl = "24.10.12"
+gene-vcl = "24.10.12-1"
 gene-cartoon = "1.0"
 gene-cubic = "1.0"
 gene-view-dsl = "1.0"
@@ -366,7 +366,6 @@ android-project = [
     "androidx-fragment-ktx",
     "androidx-activity-ktx",
     "kmp-androidx-annotation",
-    "koin-androidx-navigation",
     "androidx-navigation-ui-ktx",
     "androidx-core-splashscreen",
     "kmp-androidx-collection-ktx",
@@ -393,7 +392,12 @@ android-optional = [
     "kotlinx-serialization-json",
 ]
 
-androidx-room = ["androidx-room-runtime", "androidx-room-ktx", "androidx-room-paging"]
+androidx-room = [
+    "androidx-room-runtime",
+    "androidx-room-ktx",
+    "androidx-room-paging"
+]
+
 #https://developer.android.google.cn/studio/profile/benchmark?hl=zh-cn
 androidx-benchmark = [
     "androidx-test-ext-junit",
