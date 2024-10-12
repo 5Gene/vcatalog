@@ -1,7 +1,7 @@
 #https://github.com/terrakok/kmp-awesome
 
 [versions]
-gene-vcl = "24.10.12-2"
+gene-vcl = "24.10.12-alpha02"
 gene-cartoon = "1.0"
 gene-cubic = "1.0"
 gene-view-dsl = "1.0"
