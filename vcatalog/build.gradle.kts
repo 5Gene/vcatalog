@@ -16,7 +16,7 @@ gradlePlugin {
             displayName = "gracle version catalog"
             description = "gracle version catalog"
             tags = listOf("config", "versionCatalog", "convention")
-            implementationClass = "june.GradlePlugin"
+            implementationClass = "june.VCatalogPlugin"
         }
     }
 }
