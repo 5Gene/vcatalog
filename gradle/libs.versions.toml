@@ -120,11 +120,13 @@ coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "compose-coil
 # compose-bom start >>>>>>>>>>>>androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidx-compose-bom" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidx-compose-bom" }
 androidx-compose-ui = { module = "androidx.compose.ui:ui" }
+# compose-ui内部有依赖以下几个
 androidx-compose-ui-util = { module = "androidx.compose.ui:ui-util" }
 androidx-compose-ui-unit = { module = "androidx.compose.ui:ui-unit" }
 androidx-compose-ui-text = { module = "androidx.compose.ui:ui-text" }
 androidx-compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
 androidx-compose-ui-geometry = { module = "androidx.compose.ui:ui-geometry" }
+# compose-ui内部有依赖以上几个
 androidx-compose-runtime = { module = "androidx.compose.runtime:runtime" }
 androidx-compose-foundation = { module = "androidx.compose.foundation:foundation" }
 androidx-compose-foundation-layout = { module = "androidx.compose.foundation:foundation-layout" }
