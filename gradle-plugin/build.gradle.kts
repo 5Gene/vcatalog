@@ -5,7 +5,7 @@ plugins {
 
 group = "io.github.5hmlA"
 
-version = libs.versions.vcl.get()
+version = libs.versions.gene.vcl.get()
 
 gradlePlugin {
     website = "https://github.com/5Gene/vcatalog"
