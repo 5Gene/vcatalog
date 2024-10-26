@@ -1,6 +1,3 @@
-include(":app")
-
-
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -16,5 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-include(":vcatalog")
+includeBuild("check")
+include("vcatalog")
 rootProject.name = "vcatalog"

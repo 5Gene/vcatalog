@@ -1,24 +1,27 @@
-import wing.publishMavenCentral
+import june.wing.publishMavenCentral
+
+buildscript {
+    dependencies {
+        classpath(libs.gene.conventions)
+    }
+}
 
 plugins {
-    alias(libs.plugins.android.application) apply false
-    alias(libs.plugins.kotlin.android) apply false
+    id("java-library")
     `version-catalog`
     `maven-publish`
 }
-buildscript {
-    dependencies {
-//        classpath(libs.gene.conventions)
-        classpath("io.github.5hmlA:conventions:2.1.10")
-    }
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 catalog {
     versionCatalog {
-        from(files("gradle/libs.versions.toml"))
+        from(files("wings.versions.toml"))
     }
 }
-
 
 publishing {
     publications {
