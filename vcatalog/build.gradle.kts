@@ -22,7 +22,7 @@ group = "io.github.5hmlA"
 version = libs.versions.gene.vcl.get()
 
 publishGradlePluginSet(false) {
-    register("vcatalog") {
+    register("plugin-vcl") {
         id = "${group}.vcl"
         displayName = "gracle version catalog"
         description = "gracle version catalog"
