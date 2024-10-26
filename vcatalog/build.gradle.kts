@@ -30,20 +30,6 @@ publishGradlePluginSet {
     }
 }
 
-//gradlePlugin {
-//    website = "https://github.com/5Gene/vcatalog"
-//    vcsUrl = "https://github.com/5Gene/vcatalog"
-//    plugins {
-//        register("vcatalog") {
-//            id = "${group}.vcl"
-//            displayName = "gracle version catalog"
-//            description = "gracle version catalog"
-//            tags = listOf("config", "versionCatalog", "convention")
-//            implementationClass = "june.VCatalogPlugin"
-//        }
-//    }
-//}
-
 tasks.findByName("publishPlugins")?.doLast {
     println("插件发布成功，点击🔗查看：https://plugins.gradle.org/")
 }

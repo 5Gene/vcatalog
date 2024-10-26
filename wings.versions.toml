@@ -1,7 +1,7 @@
 #https://github.com/terrakok/kmp-awesome
 [versions]
 gene-vcl = "24.10.26"
-gene-conventions = "2.1.17"
+gene-conventions = "2.1.19"
 gene-cartoon = "1.0"
 gene-cubic = "1.0"
 gene-view-dsl = "1.0.1"
@@ -85,6 +85,9 @@ kotlin = "2.0.20"
 android-gradle-plugin = "8.6.0"
 protobuf = "4.28.2"
 protobuf-plugin = "0.9.4"
+
+
+plugin-publish = "1.3.0"
 
 mockk = "1.13.13"
 junit = "4.13.2"
@@ -424,6 +427,7 @@ room = { id = "androidx.room", version.ref = "androidx-room" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "google-hilt" }
 #https://plugins.gradle.org/plugin/com.google.protobuf
 protobuf = { id = "com.google.protobuf", version.ref = "protobuf-plugin" }
+plugin-publish = { id = "com.gradle.plugin-publish", version.ref = "plugin-publish" }
 
 gene-compose = { id = "io.github.5hmlA.android.compose", version.ref = "gene-conventions" }
 gene-android = { id = "io.github.5hmlA.android", version.ref = "gene-conventions" }
