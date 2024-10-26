@@ -1,10 +1,10 @@
 #https://github.com/terrakok/kmp-awesome
 [versions]
 gene-vcl = "24.10.26"
-gene-conventions = "2.1.16"
+gene-conventions = "2.1.17"
 gene-cartoon = "1.0"
 gene-cubic = "1.0"
-gene-view-dsl = "1.0"
+gene-view-dsl = "1.0.1"
 gene-adapter = "1.0"
 gene-spark = "1.0"
 gene-auto-service = "0.0.8"

@@ -1,5 +1,4 @@
 import june.wing.publishGradlePluginSet
-import org.gradle.kotlin.dsl.libs
 
 buildscript {
     dependencies {
@@ -9,8 +8,8 @@ buildscript {
 
 plugins {
     `kotlin-dsl`
-    alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.build.config)
+    alias(libs.plugins.plugin.publish)
 }
 
 //https://github.com/gmazzo/gradle-buildconfig-plugin
@@ -21,7 +20,7 @@ buildConfig {
 group = "io.github.5hmlA"
 version = libs.versions.gene.vcl.get()
 
-publishGradlePluginSet(false) {
+publishGradlePluginSet {
     register("plugin-vcl") {
         id = "${group}.vcl"
         displayName = "gracle version catalog"
@@ -30,6 +29,20 @@ publishGradlePluginSet(false) {
         implementationClass = "june.VCatalogPlugin"
     }
 }
+
+//gradlePlugin {
+//    website = "https://github.com/5Gene/vcatalog"
+//    vcsUrl = "https://github.com/5Gene/vcatalog"
+//    plugins {
+//        register("vcatalog") {
+//            id = "${group}.vcl"
+//            displayName = "gracle version catalog"
+//            description = "gracle version catalog"
+//            tags = listOf("config", "versionCatalog", "convention")
+//            implementationClass = "june.VCatalogPlugin"
+//        }
+//    }
+//}
 
 tasks.findByName("publishPlugins")?.doLast {
     println("插件发布成功，点击🔗查看：https://plugins.gradle.org/")
