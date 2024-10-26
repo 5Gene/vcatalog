@@ -1,7 +1,7 @@
 #https://github.com/terrakok/kmp-awesome
 [versions]
 # 务必同时更新VcatalogPlugin.kt中引用的版本号
-gene-vcl = "24.10.26"
+gene-vcl = "24.10.27"
 build-config = "5.5.0"
 gene-conventions = "2.1.19"
 kotlin = "2.0.20"
