@@ -7,15 +7,15 @@ buildscript {
 }
 
 plugins {
-    id("java-library")
+//    id("java-library")
     `version-catalog`
     `maven-publish`
 }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
+//java {
+//    sourceCompatibility = JavaVersion.VERSION_17
+//    targetCompatibility = JavaVersion.VERSION_17
+//}
 
 catalog {
     versionCatalog {
