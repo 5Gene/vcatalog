@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-includeBuild("check")
+//includeBuild("check")
 include("vcatalog")
 rootProject.name = "vcatalog"
