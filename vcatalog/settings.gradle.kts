@@ -1,5 +1,4 @@
 pluginManagement {
-    includeBuild("vcatalog")
     repositories {
         google {
             content {
@@ -13,6 +12,11 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            from(files("../gradle/libs.versions.toml"))
+        }
+    }
     repositories {
         google {
             content {
@@ -24,10 +28,3 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-
-//plugins {
-//    id("io.github.5hmlA.vcl")
-//}
-
-//includeBuild("check")
-rootProject.name = "vcatalog"
