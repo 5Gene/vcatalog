@@ -39,8 +39,8 @@ jobs:
           echo 💊 那么说明是因为gradle目录，gradlew文件没同步到github导致的,检查下是否此目录下有文件没上传
           echo 💊 gradle-wrapper.jar检查是否存在
           chmod +x ./gradlew
-          ./gradlew publishPlugins
           ./gradlew publishToMavenCentral
+          ./gradlew :vcatalog:publishPlugins
         env:
           SIGN_GPG_KEY: ${{ secrets.SIGN_GPG_KEY }}
           SIGN_GPG_PASSWORD: ${{ secrets.SIGN_GPG_PASSWORD }}
