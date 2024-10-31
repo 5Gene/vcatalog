@@ -1,6 +1,6 @@
 #https://github.com/terrakok/kmp-awesome
 [versions]
-gene-conventions = "2.1.21"
+gene-conventions = "2.1.22"
 gene-cartoon = "1.0"
 gene-cubic = "1.0"
 gene-view-dsl = "1.0.1"
@@ -10,7 +10,7 @@ gene-auto-service = "0.0.8"
 gene-ksp-poe = "1.0"
 gene-net-ksp-repository = "1.0.1"
 gene-net-ksp-anno = "1.0.1"
-gene-replace = "0.1.9"
+gene-replace = "0.1.12"
 
 ktx-activity = "1.9.3"
 ktx-core = "1.13.1"
