@@ -7,11 +7,18 @@ from pathlib import Path
 # 复制文件到多个项目的文件夹 update-vcl-version.py
 # 命令行：python .\update-vcl-version.py
 
+def should_skip_directory(dirname):
+    """判断是否应该跳过该目录"""
+    return dirname == 'build'
+
 def find_git_repositories(start_path):
     """找到当前目录下的所有git仓库根目录"""
     git_repos = set()
-    
+
     for root, dirs, files in os.walk(start_path):
+        # 过滤掉不需要遍历的目录
+        dirs[:] = [d for d in dirs if not should_skip_directory(d)]
+
         if '.git' in dirs:
             try:
                 # 验证这确实是一个git仓库的根目录
@@ -25,17 +32,16 @@ def find_git_repositories(start_path):
                 dirs.remove('.git')
             except subprocess.CalledProcessError:
                 continue
-    
+
     return sorted(git_repos)  # 排序以保证处理顺序一致
 
 def find_settings_files(git_root):
     """在git仓库中查找所有settings.gradle文件"""
     settings_files = []
-    
+
     for root, dirs, files in os.walk(git_root):
-        # 跳过.git目录
-        if '.git' in dirs:
-            dirs.remove('.git')
+        # 过滤掉不需要遍历的目录
+        dirs[:] = [d for d in dirs if not should_skip_directory(d)]
             
         if 'settings.gradle' in files:
             settings_files.append(os.path.join(root, 'settings.gradle'))
