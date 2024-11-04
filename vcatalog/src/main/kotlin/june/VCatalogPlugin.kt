@@ -33,19 +33,24 @@ class VCatalogPlugin : Plugin<Settings> {
 
     private fun Settings.repositoryConfig(settings: Settings) {
         val repositoriesMode = dependencyResolutionManagement.repositoriesMode.get()
-        println("settingsEvaluated -> gradle:${settings.gradle.hashCode()} -> repositoriesMode: $repositoriesMode")
+        println("vcl => settingsEvaluated -> gradle:${settings.gradle.hashCode()} -> repositoriesMode: $repositoriesMode")
         settings.gradle.extra["repositoriesMode"] = repositoriesMode
         if (repositoriesMode == RepositoriesMode.PREFER_SETTINGS || repositoriesMode == RepositoriesMode.FAIL_ON_PROJECT_REPOS) {
             settings.dependencyResolutionManagement.repositories.addRepositoryFirst {
                 maven {
-                    name = "tencent"
-                    isAllowInsecureProtocol = true
+                    name = "tencent_vcl"
+                    // 用于指定是否允许通过不安全的协议（如HTTP）与仓库进行通信。默认情况下，
+                    // Gradle 会优先使用安全的协议（如HTTPS）来确保数据传输的安全性。
+                    // 但是，在某些情况下，你可能需要与仅支持HTTP的仓库进行通信，
+                    // 这时就需要配置 isAllowInsecureProtocol 来允许这种不安全的连接
+                    //isAllowInsecureProtocol = true
                     setUrl("https://mirrors.tencent.com/nexus/repository/maven-public/")
                     content {
                         //https://blog.csdn.net/jklwan/article/details/99351808
                         excludeGroupByRegex("osp.spark.*")
                         excludeGroupByRegex("osp.june.*")
                         excludeGroupByRegex("osp.gene.*")
+                        excludeGroup("aar")
                     }
                 }
             }
@@ -59,7 +64,7 @@ class VCatalogPlugin : Plugin<Settings> {
                     includeGroupByRegex("androidx.*")
                 }
             }
-            println("settingsEvaluated -> repositories -> ${it.name} ====== $it")
+            println("vcl => settingsEvaluated -> repositories -> ${it.name} ====== $it")
         }
     }
 }
