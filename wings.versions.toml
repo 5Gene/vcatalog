@@ -53,7 +53,8 @@ kotlinx-datetime = "0.5.0"
 kotlinx-atomicfu = "0.23.2"
 kotlinx-io = "0.3.0"
 
-androidx-compose-bom = "2024.12.01"
+# https://mvnrepository.com/artifact/androidx.compose/compose-bom
+androidx-compose-bom = "2025.01.01"
 androidx-compose-activity = "1.9.3"
 androidx-compose-constraintlayout = "1.1.0"
 androidx-compose-navigation = "2.8.3"
@@ -63,27 +64,27 @@ compose-coil = "2.7.0"
 google-auto-service-anno = "1.1.1"
 google-material = "1.12.0"
 google-accompanist = "0.36.0"
-google-hilt = "2.49"
-google-protobuf = "4.28.2"
+google-hilt = "2.55"
+google-protobuf = "4.29.3"
 google-ksp = "2.0.21-1.0.26"
 
 squareup-poe = "1.18.0"
 okhttp-bom = "4.12.0"
 retrofit = "2.11.0"
 retrofit-kotlinx-serialization-converter = "1.0.0"
-koin-bom = "4.0.0"
-ktor = "2.3.7"
-lottie = "6.5.2"
+koin-bom = "4.0.2"
+ktor = "3.1.0"
+lottie = "6.6.2"
 
 kmp-androidx-collection = "1.4.5"
 kmp-androidx-annotation = "1.9.1"
 kmp-androidx-datastore = "1.1.1"
 kmp-androidx-paging = "3.3.2"
 kmp-androidx-lifecycle = "2.8.7"
+kmp-compose-coil = "3.1.0"
 
 kotlin = "2.0.21"
 android-gradle-plugin = "8.7.3"
-protobuf = "4.28.2"
 protobuf-plugin = "0.9.4"
 
 #===========================
@@ -215,6 +216,8 @@ androidx-compose-hilt-navigation = { module = "androidx.hilt:hilt-navigation-com
 #https://coil-kt.github.io/coil/compose/
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "compose-coil" }
 
+kmp-coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "kmp-compose-coil" }
+kmp-coil-compose-android = { module = "io.coil-kt.coil3:coil-compose-android", version.ref = "kmp-compose-coil" }
 
 #The following Jetpack libraries provide KMP support:
 #https://github.com/terrakok/kmp-awesome
