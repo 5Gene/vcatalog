@@ -1,7 +1,7 @@
 #https://github.com/terrakok/kmp-awesome
 [versions]
 kotlin = "2.0.20"
-android-gradle-plugin = "8.6.0"
+android-gradle-plugin = "8.6.1"
 protobuf = "4.28.2"
 protobuf-plugin = "0.9.4"
 androidx-room = "2.6.1"
