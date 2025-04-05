@@ -18,17 +18,8 @@ dependencyResolutionManagement {
         mavenCentral()
     }
     versionCatalogs {
-        create("gene") {
-            from(files("gradle/gene.versions.toml"))
-        }
-        create("androidx") {
-            from(files("gradle/androidx.versions.toml"))
-        }
-        create("plugins") {
-            from(files("gradle/plugins.versions.toml"))
-        }
-        create("other") {
-            from(files("gradle/other.versions.toml"))
+        create("vcl") {
+            from(files("../wings.versions.toml"))
         }
     }
 }

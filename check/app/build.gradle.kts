@@ -1,15 +1,16 @@
 plugins {
-    alias(plugins.plugins.android.application)
-    alias(plugins.plugins.kotlin.android)
+    alias(vcl.plugins.android.application)
+    alias(vcl.plugins.kotlin.android)
 }
 
 android {
     namespace = "com.checker"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         minSdk = 24
-        targetSdk = 34
+        //noinspection EditedTargetSdkVersion
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -32,9 +33,11 @@ android {
 }
 
 dependencies {
-
-    implementation(androidx.androidx.core.ktx)
-    implementation(androidx.androidx.appcompat)
-//    implementation(androidx.androidx.activity)
-    implementation(androidx.androidx.constraintlayout)
+    implementation(vcl.androidx.core.ktx)
+    implementation(vcl.androidx.appcompat)
+//    implementation(vcl.androidx.activity)
+    implementation(vcl.androidx.constraintlayout)
+    implementation(vcl.androidx.preference.ktx)
+    implementation(vcl.google.material)
+    implementation("pub.devrel:easypermissions:3.0.0")
 }
