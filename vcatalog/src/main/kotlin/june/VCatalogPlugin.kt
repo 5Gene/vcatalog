@@ -4,8 +4,28 @@ import io.github._5hmlA.vcatalog.BuildConfig
 import org.gradle.api.Plugin
 import org.gradle.api.artifacts.dsl.RepositoryHandler
 import org.gradle.api.initialization.Settings
+import org.gradle.api.initialization.dsl.VersionCatalogBuilder
 import org.gradle.api.initialization.resolve.RepositoriesMode
+import org.gradle.api.plugins.ExtensionAware
 import org.gradle.kotlin.dsl.extra
+
+interface VclOverride {
+    fun onCreate(callback: VersionCatalogBuilder.() -> Unit)
+}
+
+class VclOverrideImpl : VclOverride {
+    var onCreate: (VersionCatalogBuilder.() -> Unit)? = null
+
+    override fun onCreate(callback: (VersionCatalogBuilder) -> Unit) {
+        onCreate = callback
+    }
+}
+
+abstract class VclOverrideExtension(private val vclOverrideImpl: VclOverrideImpl) : VclOverride, ExtensionAware {
+    override fun onCreate(callback: VersionCatalogBuilder.() -> Unit) {
+        vclOverrideImpl.onCreate(callback)
+    }
+}
 
 class VCatalogPlugin : Plugin<Settings> {
     fun RepositoryHandler.addRepositoryFirst(addRepoAction: RepositoryHandler.() -> Unit) {
@@ -19,12 +39,17 @@ class VCatalogPlugin : Plugin<Settings> {
     }
 
     override fun apply(settings: Settings) {
+        val vclOverrideImpl = VclOverrideImpl()
+        settings.extensions.create("vcl", VclOverrideExtension::class.java, vclOverrideImpl)
         settings.gradle.settingsEvaluated {
             repositoryConfig(settings)
             settings.dependencyResolutionManagement {
                 versionCatalogs {
                     create("vcl") {
                         from("io.github.5hmla:vcatalog:${BuildConfig.VCL_VERSION}")
+                        vclOverrideImpl.onCreate?.invoke(this@create)
+                        // overwrite the "groovy" version declared in the imported catalog
+                        // version("groovy", "3.0.6")
                     }
                 }
             }
