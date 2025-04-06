@@ -278,6 +278,8 @@ lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "
 test-junit = { module = "junit:junit", version.ref = "junit" }
 test-mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+
 [bundles]
 compose = [
     "androidx-compose-ui",
