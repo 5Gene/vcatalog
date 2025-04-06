@@ -8,7 +8,7 @@ gene-adapter = "2.0"
 gene-spark = "1.0"
 gene-auto-service = "0.0.8"
 gene-ksp-poe = "1.1"
-gene-retrofit-ksp = "1.1"
+gene-retrofit-ksp = "1.2"
 gene-retrofit-ksp-anno = "1.1"
 gene-replace = "0.3"
 
@@ -47,11 +47,11 @@ androidx-constraintlayout = "2.2.1"
 androidx-bluetooth = "1.0.0-alpha02"
 androidx-webkit = "1.13.0"
 
-kotlinx-coroutines = "1.9.0"
-kotlinx-serialization = "1.6.3"
+kotlinx-coroutines = "1.10.1"
+kotlinx-serialization = "1.8.1"
 kotlinx-datetime = "0.5.0"
 kotlinx-atomicfu = "0.23.2"
-kotlinx-io = "0.3.0"
+kotlinx-io = "0.7.0"
 
 # https://mvnrepository.com/artifact/androidx.compose/compose-bom
 androidx-compose-bom = "2025.03.00"
@@ -66,15 +66,15 @@ google-material = "1.12.0"
 google-accompanist = "0.36.0"
 google-hilt = "2.55"
 google-protobuf = "4.30.2"
-google-ksp = "2.0.21-1.0.26"
+google-ksp = "2.1.20-1.0.32"
 
 squareup-poe = "1.18.0"
 okhttp-bom = "4.12.0"
 retrofit = "2.11.0"
 retrofit-kotlinx-serialization-converter = "1.0.0"
-koin-bom = "4.0.2"
-ktor = "3.1.0"
-lottie = "6.6.2"
+koin-bom = "4.0.4"
+ktor = "3.1.2"
+lottie = "6.6.4"
 
 kmp-androidx-collection = "1.5.0"
 kmp-androidx-annotation = "1.9.1"
@@ -83,7 +83,11 @@ kmp-androidx-paging = "3.3.6"
 kmp-androidx-lifecycle = "2.8.7"
 kmp-compose-coil = "3.1.0"
 
-kotlin = "2.0.21"
+kotlin = "2.1.20"
+
+# https://developer.android.com/build/releases/gradle-plugin
+# 8.9.1 == 8.11.1
+# https://developer.android.com/reference/tools/gradle-api
 android-gradle-plugin = "8.7.3"
 protobuf-plugin = "0.9.4"
 
@@ -269,6 +273,7 @@ kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.
 kotlinx-atomicfu = { module = "org.jetbrains.kotlinx:atomicfu", version.ref = "kotlinx-atomicfu" }
 kotlinx-io = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinx-io" }
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
 
 test-junit = { module = "junit:junit", version.ref = "junit" }
 test-mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
