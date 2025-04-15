@@ -48,6 +48,7 @@ class VCatalogPlugin : Plugin<Settings> {
                     create("vcl") {
                         from("io.github.5hmla:vcatalog:${BuildConfig.VCL_VERSION}")
                         vclOverrideImpl.onCreate?.invoke(this@create)
+                        // https://docs.gradle.org/current/userguide/version_catalogs.html
                         // overwrite the "groovy" version declared in the imported catalog
                         // version("groovy", "3.0.6")
                     }
