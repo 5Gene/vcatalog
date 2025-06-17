@@ -1,22 +1,22 @@
 #https://github.com/terrakok/kmp-awesome
 [versions]
-gene-conventions = "2.2"
-gene-cartoon = "1.0.1"
-gene-cubic = "1.0"
-gene-view-dsl = "1.0.2"
-gene-adapter = "1.0"
+gene-conventions = "25.04.13"
+gene-cartoon = "1.1"
+gene-cubic = "1.1"
+gene-view-dsl = "1.2"
+gene-adapter = "2.0"
 gene-spark = "1.0"
 gene-auto-service = "0.0.8"
 gene-ksp-poe = "1.1"
-gene-retrofit-ksp = "1.1"
+gene-retrofit-ksp = "1.2"
 gene-retrofit-ksp-anno = "1.1"
-gene-replace = "0.1.18"
+gene-replace = "0.8"
 
 ktx-activity = "1.10.1"
-ktx-core = "1.15.0"
+ktx-core = "1.16.0"
 ktx-collection = "1.5.0"
 ktx-preference = "1.2.1"
-ktx-dynamicanimation = "1.0.0-beta01"
+ktx-dynamicanimation = "1.1.0"
 ktx-navigationFragment = "2.8.9"
 ktx-fragment = "1.8.6"
 ktx-navigation-ui = "2.8.9"
@@ -25,7 +25,7 @@ ktx-transition = "1.5.1"
 ktx-work-runtime = "2.10.0"
 
 androidx-lifecycle = "2.8.7"
-androidx-benchmark = "1.3.3"
+androidx-benchmark = "1.3.4"
 androidx-viewpager2 = "1.1.0"
 androidx-window = "1.3.0"
 androidx-window-ext = "1.0.0"
@@ -33,28 +33,28 @@ androidx-profileinstaller = "1.4.1"
 androidx-core-splashscreen = "1.0.1"
 androidx-core-animation = "1.0.0"
 androidx-annotation = "1.9.1"
-androidx-room = "2.6.1"
-androidx-datastore = "1.1.3"
+androidx-room = "2.7.0"
+androidx-datastore = "1.1.4"
 androidx-test-ext = "1.2.1"
 androidx-test-espresso = "3.6.1"
 androidx-test-uiautomator = "2.3.0"
 androidx-paging = "3.3.6"
 androidx-appcompat = "1.7.0"
-androidx-dynamicanimation = "1.1.0-beta01"
+androidx-dynamicanimation = "1.1.0"
 androidx-swiperefreshlayout = "1.1.0"
 androidx-recyclerview = "1.4.0"
-androidx-constraintlayout = "2.2.0"
+androidx-constraintlayout = "2.2.1"
 androidx-bluetooth = "1.0.0-alpha02"
 androidx-webkit = "1.13.0"
 
-kotlinx-coroutines = "1.9.0"
-kotlinx-serialization = "1.6.3"
+kotlinx-coroutines = "1.10.1"
+kotlinx-serialization = "1.8.1"
 kotlinx-datetime = "0.5.0"
 kotlinx-atomicfu = "0.23.2"
-kotlinx-io = "0.3.0"
+kotlinx-io = "0.7.0"
 
 # https://mvnrepository.com/artifact/androidx.compose/compose-bom
-androidx-compose-bom = "2025.03.00"
+androidx-compose-bom = "2025.06.00"
 androidx-compose-activity = "1.10.1"
 androidx-compose-constraintlayout = "1.1.1"
 androidx-compose-navigation = "2.8.9"
@@ -65,30 +65,35 @@ google-auto-service-anno = "1.1.1"
 google-material = "1.12.0"
 google-accompanist = "0.36.0"
 google-hilt = "2.55"
-google-protobuf = "4.29.3"
-google-ksp = "2.0.21-1.0.26"
+google-protobuf = "4.30.2"
+google-ksp = "2.1.20-1.0.32"
 
 squareup-poe = "1.18.0"
 okhttp-bom = "4.12.0"
 retrofit = "2.11.0"
 retrofit-kotlinx-serialization-converter = "1.0.0"
-koin-bom = "4.0.2"
-ktor = "3.1.0"
-lottie = "6.6.2"
+koin-bom = "4.0.4"
+ktor = "3.1.2"
+lottie = "6.6.4"
 
 kmp-androidx-collection = "1.5.0"
 kmp-androidx-annotation = "1.9.1"
-kmp-androidx-datastore = "1.1.3"
+kmp-androidx-datastore = "1.1.4"
 kmp-androidx-paging = "3.3.6"
 kmp-androidx-lifecycle = "2.8.7"
 kmp-compose-coil = "3.1.0"
 
-kotlin = "2.0.21"
+kotlin = "2.1.20"
+
+# https://developer.android.com/build/releases/gradle-plugin
+# 8.9.1 == 8.11.1
+# https://developer.android.com/reference/tools/gradle-api
 android-gradle-plugin = "8.7.3"
 protobuf-plugin = "0.9.4"
 
 #===========================
-plugin-publish = "1.3.0"
+plugin-publish = "1.3.1"
+kotlin-dsl = "6.0.0"
 
 mockk = "1.13.13"
 junit = "4.13.2"
@@ -269,9 +274,12 @@ kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.
 kotlinx-atomicfu = { module = "org.jetbrains.kotlinx:atomicfu", version.ref = "kotlinx-atomicfu" }
 kotlinx-io = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinx-io" }
 lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
+lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
 
 test-junit = { module = "junit:junit", version.ref = "junit" }
 test-mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
 
 [bundles]
 compose = [
@@ -436,6 +444,7 @@ hilt = { id = "com.google.dagger.hilt.android", version.ref = "google-hilt" }
 #https://plugins.gradle.org/plugin/com.google.protobuf
 protobuf = { id = "com.google.protobuf", version.ref = "protobuf-plugin" }
 plugin-publish = { id = "com.gradle.plugin-publish", version.ref = "plugin-publish" }
+plugin-kotlin-dsl = { id = "org.gradle.kotlin.kotlin-dsl", version.ref = "kotlin-dsl" }
 
 gene-compose = { id = "io.github.5hmlA.android.compose", version.ref = "gene-conventions" }
 gene-android = { id = "io.github.5hmlA.android", version.ref = "gene-conventions" }
