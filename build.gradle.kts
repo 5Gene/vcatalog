@@ -1,4 +1,7 @@
 import june.wing.publishMavenCentral
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 
 buildscript {
     dependencies {
@@ -31,7 +34,13 @@ publishing {
     }
 }
 
+fun beijingTimeVersion(): String {
+    val beijingTime = LocalDateTime.now(ZoneId.of("Asia/Shanghai"))
+    val formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd")
+    return beijingTime.format(formatter)
+}
+
 group = "io.github.5hmla"
-version = libs.versions.gene.vcl.get()
+version = beijingTimeVersion()
 
 publishMavenCentral("version catalog", "versionCatalog", false)
