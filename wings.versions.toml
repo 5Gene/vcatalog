@@ -87,8 +87,11 @@ kmp-compose-coil = "3.3.0"
 kotlin = "2.2.0"
 
 # https://developer.android.com/build/releases/gradle-plugin
-# 8.9.1 == 8.11.1
+# https://developer.android.com/build/releases/gradle-plugin
+# 8.12 == 8.13
 # https://developer.android.com/reference/tools/gradle-api
+# agp最佳教程
+# https://github.com/android/gradle-recipes
 android-gradle-plugin = "8.12.0"
 protobuf-plugin = "0.9.5"
 
