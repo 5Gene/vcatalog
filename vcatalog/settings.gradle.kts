@@ -25,7 +25,7 @@ dependencyResolutionManagement {
                 val formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd")
                 return beijingTime.format(formatter)
             }
-            version("gene-vcl", beijingTimeVersion())
+//            version("gene-vcl", beijingTimeVersion())
         }
     }
     repositories {
