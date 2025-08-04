@@ -1,6 +1,6 @@
 #https://github.com/terrakok/kmp-awesome
 [versions]
-gene-conventions = "2025.08.05"
+gene-conventions = "2025.08.06"
 gene-cartoon = "1.1"
 gene-cubic = "1.1"
 gene-view-dsl = "1.2"
@@ -66,7 +66,6 @@ google-material = "1.12.0"
 google-accompanist = "0.37.3"
 google-hilt = "2.57"
 google-protobuf = "4.31.1"
-google-ksp = "2.2.0-2.0.2"
 
 squareup-poe = "2.2.0"
 okhttp-bom = "5.1.0"
@@ -83,7 +82,9 @@ kmp-androidx-paging = "3.3.6"
 kmp-androidx-lifecycle = "2.9.2"
 kmp-compose-coil = "3.3.0"
 
-kotlin = "2.2.0"
+kotlin = "2.2.0" #必须同时修改对应的ksp版本
+google-ksp = "2.2.0-2.0.2"
+# https://github.com/google/ksp/releases/
 
 # https://developer.android.com/build/releases/gradle-plugin
 # 8.9.1 == 8.11.1
