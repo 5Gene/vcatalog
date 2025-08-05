@@ -1,6 +1,7 @@
 package june
 
 import io.github._5hmlA.vcatalog.BuildConfig
+import org.gradle.api.Action
 import org.gradle.api.Plugin
 import org.gradle.api.artifacts.dsl.RepositoryHandler
 import org.gradle.api.initialization.Settings
@@ -9,15 +10,28 @@ import org.gradle.api.initialization.resolve.RepositoriesMode
 import org.gradle.api.plugins.ExtensionAware
 import org.gradle.kotlin.dsl.extra
 
+//vcl {
+//    onCreate {
+//        version("google-ksp", "2.2.0-2.0.2")  //gradle.kts
+//        it.version("google-ksp", "2.2.0-2.0.2") //gradle
+//    }
+//}
 interface VclOverride {
     fun onCreate(callback: VersionCatalogBuilder.() -> Unit)
+
+    fun doOverride(callback: Action<VersionCatalogBuilder>)
 }
 
 class VclOverrideImpl : VclOverride {
     var onCreate: (VersionCatalogBuilder.() -> Unit)? = null
+    var overrideAction: Action<VersionCatalogBuilder>? = null
 
     override fun onCreate(callback: (VersionCatalogBuilder) -> Unit) {
         onCreate = callback
+    }
+
+    override fun doOverride(callback: Action<VersionCatalogBuilder>) {
+        overrideAction = callback
     }
 }
 
@@ -48,6 +62,7 @@ class VCatalogPlugin : Plugin<Settings> {
                     create("vcl") {
                         from("io.github.5hmla:vcatalog:${BuildConfig.VCL_VERSION}")
                         vclOverrideImpl.onCreate?.invoke(this@create)
+                        vclOverrideImpl.overrideAction?.execute(this)
                         // https://docs.gradle.org/current/userguide/version_catalogs.html
                         // overwrite the "groovy" version declared in the imported catalog
                         // version("groovy", "3.0.6")
