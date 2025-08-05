@@ -7,7 +7,8 @@ buildscript {
 }
 
 plugins {
-//    id("java-library")
+    alias(libs.plugins.jetbrains.kotlin.jvm) apply false
+    //    id("java-library")
     `version-catalog`
     `maven-publish`
 }

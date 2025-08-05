@@ -1,7 +1,9 @@
+
 plugins {
     alias(vcl.plugins.android.application)
     alias(vcl.plugins.kotlin.android)
 }
+    apply<MyPlugin>()
 
 android {
     namespace = "com.checker"

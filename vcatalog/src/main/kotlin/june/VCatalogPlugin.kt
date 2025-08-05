@@ -22,7 +22,7 @@ interface VclOverride {
     fun doOverride(callback: Action<VersionCatalogBuilder>)
 }
 
-class VclOverrideImpl : VclOverride {
+open class VclOverrideImpl : VclOverride {
     var onCreate: (VersionCatalogBuilder.() -> Unit)? = null
     var overrideAction: Action<VersionCatalogBuilder>? = null
 
@@ -35,9 +35,15 @@ class VclOverrideImpl : VclOverride {
     }
 }
 
+
 abstract class VclOverrideExtension(private val vclOverrideImpl: VclOverrideImpl) : VclOverride, ExtensionAware {
+
     override fun onCreate(callback: VersionCatalogBuilder.() -> Unit) {
         vclOverrideImpl.onCreate(callback)
+    }
+
+    override fun doOverride(callback: Action<VersionCatalogBuilder>) {
+        vclOverrideImpl.doOverride(callback)
     }
 }
 
@@ -54,7 +60,7 @@ class VCatalogPlugin : Plugin<Settings> {
 
     override fun apply(settings: Settings) {
         val vclOverrideImpl = VclOverrideImpl()
-        settings.extensions.create("vcl", VclOverrideExtension::class.java, vclOverrideImpl)
+        settings.extensions.create("vcl",VclOverrideExtension::class.java, vclOverrideImpl)
         settings.gradle.settingsEvaluated {
             repositoryConfig(settings)
             settings.dependencyResolutionManagement {
@@ -69,6 +75,7 @@ class VCatalogPlugin : Plugin<Settings> {
                     }
                 }
             }
+
         }
     }
 

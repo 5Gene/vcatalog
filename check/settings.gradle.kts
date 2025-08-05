@@ -19,7 +19,8 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("vcl") {
-            from(files("../wings.versions.toml"))
+            from(files("gradle/wings.versions.toml"))
+//            from(files("../wings.versions.toml"))
         }
     }
 }
