@@ -1,6 +1,6 @@
 #https://github.com/terrakok/kmp-awesome
 [versions]
-gene-conventions = "2025.08.05"
+gene-conventions = "2025.08.06"
 gene-cartoon = "1.1"
 gene-cubic = "1.1"
 gene-view-dsl = "1.2"
@@ -54,6 +54,7 @@ kotlinx-atomicfu = "0.29.0"
 kotlinx-io = "0.8.0"
 
 # https://mvnrepository.com/artifact/androidx.compose/compose-bom
+# https://developer.android.com/develop/ui/compose/bom/bom-mapping
 androidx-compose-bom = "2025.07.00"
 androidx-compose-activity = "1.10.1"
 androidx-compose-constraintlayout = "1.1.1"
@@ -87,8 +88,10 @@ google-ksp = "2.2.0-2.0.2"
 # https://github.com/google/ksp/releases/
 
 # https://developer.android.com/build/releases/gradle-plugin
-# 8.9.1 == 8.11.1
+# 8.12 == 8.13
 # https://developer.android.com/reference/tools/gradle-api
+# agp最佳教程
+# https://github.com/android/gradle-recipes
 android-gradle-plugin = "8.12.0"
 protobuf-plugin = "0.9.5"
 

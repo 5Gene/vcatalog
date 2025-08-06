@@ -15,6 +15,10 @@ import org.gradle.kotlin.dsl.extra
 //        version("google-ksp", "2.2.0-2.0.2")  //gradle.kts
 //        it.version("google-ksp", "2.2.0-2.0.2") //gradle
 //    }
+//    doOverride {
+//        version("google-ksp", "2.2.0-2.0.2")  //gradle.kts
+//        version("google-ksp", "2.2.0-2.0.2") //gradle
+//    }
 //}
 interface VclOverride {
     fun onCreate(callback: VersionCatalogBuilder.() -> Unit)

@@ -26,7 +26,7 @@ dependencyResolutionManagement {
                 return beijingTime.format(formatter)
             }
             // overwrite the "groovy" version declared in the imported catalog
-//            version("gene-vcl", beijingTimeVersion())
+            version("gene-vcl", beijingTimeVersion())
         }
     }
     repositories {
