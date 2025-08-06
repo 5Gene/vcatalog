@@ -9,6 +9,9 @@ import org.gradle.api.initialization.dsl.VersionCatalogBuilder
 import org.gradle.api.initialization.resolve.RepositoriesMode
 import org.gradle.api.plugins.ExtensionAware
 import org.gradle.kotlin.dsl.extra
+import java.time.LocalDateTime
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 
 //vcl {
 //    onCreate {
@@ -124,4 +127,10 @@ class VCatalogPlugin : Plugin<Settings> {
 
 val isCI: Boolean by lazy {
     System.getenv("CI") == "true" || System.getenv("GITHUB_ACTIONS") == "true" || System.getenv("JENKINS_HOME") != null
+}
+
+fun beijingTimeVersion(): String {
+    val beijingTime = LocalDateTime.now(ZoneId.of("Asia/Shanghai"))
+    val formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd")
+    return beijingTime.format(formatter)
 }
