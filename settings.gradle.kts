@@ -45,5 +45,5 @@ dependencyResolutionManagement {
 //    id("io.github.5hmlA.vcl")
 //}
 
-//includeBuild("check")
+includeBuild("check")
 rootProject.name = "vcatalog"
