@@ -4,7 +4,7 @@ gene-conventions = "2025.08.06"
 gene-cartoon = "1.1"
 gene-cubic = "1.1"
 gene-view-dsl = "1.2"
-gene-adapter = "2.0"
+gene-adapter = "2025.08.05"
 gene-spark = "1.0"
 gene-auto-service = "0.0.8"
 gene-ksp-poe = "1.1"
@@ -55,7 +55,7 @@ kotlinx-io = "0.8.0"
 
 # https://mvnrepository.com/artifact/androidx.compose/compose-bom
 # https://developer.android.com/develop/ui/compose/bom/bom-mapping
-androidx-compose-bom = "2025.08.01"
+androidx-compose-bom = "2025.10.01"
 androidx-compose-activity = "1.10.1"
 androidx-compose-constraintlayout = "1.1.1"
 androidx-compose-navigation = "2.9.3"
@@ -63,13 +63,13 @@ androidx-compose-hilt-navigation = "1.2.0"
 compose-coil = "2.7.0"
 
 google-auto-service-anno = "1.1.1"
-google-material = "1.12.0"
+google-material = "1.13.0"
 google-accompanist = "0.37.3"
-google-hilt = "2.57.1"
-google-protobuf = "4.32.0"
+google-hilt = "2.57.2"
+google-protobuf = "4.33.0"
 
 squareup-poe = "2.2.0"
-okhttp-bom = "5.1.0"
+okhttp-bom = "5.3.0"
 retrofit = "3.0.0"
 retrofit-kotlinx-serialization-converter = "1.0.0"
 koin-bom = "4.1.1"
@@ -83,8 +83,8 @@ kmp-androidx-paging = "3.3.6"
 kmp-androidx-lifecycle = "2.9.2"
 kmp-compose-coil = "3.3.0"
 
-kotlin = "2.2.10" #必须同时修改对应的ksp版本
-google-ksp = "2.2.10-2.0.2"
+kotlin = "2.2.21" #必须同时修改对应的ksp版本
+google-ksp = "2.2.21-2.0.4"
 # https://github.com/google/ksp/releases/
 
 # https://developer.android.com/build/releases/gradle-plugin
@@ -92,18 +92,19 @@ google-ksp = "2.2.10-2.0.2"
 # https://developer.android.com/reference/tools/gradle-api
 # agp最佳教程
 # https://github.com/android/gradle-recipes
-android-gradle-plugin = "8.12.0"
+android-gradle-plugin = "8.13.0"
 protobuf-plugin = "0.9.5"
 
 #===========================
 plugin-publish = "2.0.0"
-kotlin-dsl = "6.3.0"
+kotlin-dsl = "6.4.2"
+#kotlin-dsl = "6.0.0"
 
-mockk = "1.14.5"
+mockk = "1.14.6"
 junit = "4.13.2"
 
 android-compileSdk = "36"
-android-minSdk = "26"
+android-minSdk = "29"
 android-targetSdk = "36"
 
 [libraries]
