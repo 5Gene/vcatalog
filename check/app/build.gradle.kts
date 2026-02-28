@@ -1,3 +1,4 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(vcl.plugins.android.application)
@@ -29,8 +30,13 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "17"
+    kotlin {
+        // Extension level
+        compilerOptions {
+            jvmTarget = JvmTarget.fromTarget("17")
+//            languageVersion = KotlinVersion.fromVersion("2.3")
+//            apiVersion = KotlinVersion.fromVersion("2.3")
+        }
     }
 }
 

@@ -84,7 +84,7 @@ kmp-androidx-lifecycle = "2.10.0"
 kmp-compose-coil = "3.4.0"
 
 kotlin = "2.3.10" #必须同时修改对应的ksp版本
-google-ksp = "2.2.21-2.0.4"
+google-ksp = "2.3.6"
 # https://github.com/google/ksp/releases/
 
 # https://developer.android.com/build/releases/gradle-plugin
