@@ -1,11 +1,11 @@
 #https://github.com/terrakok/kmp-awesome
 [versions]
-# 务必同时更新VcatalogPlugin.kt中引用的版本号
+# version("gene-vcl", beijingTimeVersion()) 已经重写，这里可以不用改
 gene-vcl = "2025.11.29"
-gene-conventions = "2025.08.06"
-build-config = "6.0.6"
-plugin-publish = "2.0.0"
-jetbrains-kotlin-jvm = "2.2.21"
+gene-conventions = "2026.05.24-1"
+build-config = "6.0.9"
+plugin-publish = "2.1.1"
+jetbrains-kotlin-jvm = "2.3.21"
 
 [libraries]
 gene-conventions = { module = "io.github.5hmlA:conventions", version.ref = "gene-conventions" }

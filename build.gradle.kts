@@ -1,3 +1,4 @@
+import june.tasks.UpdateVersionCatalogTask
 import june.wing.publishMavenCentral
 
 buildscript {
@@ -36,3 +37,15 @@ group = "io.github.5hmla"
 version = libs.versions.gene.vcl.get()
 
 publishMavenCentral("version catalog", "versionCatalog", false)
+
+tasks.register<UpdateVersionCatalogTask>(
+    "updateVersionCatalog"
+) {
+
+    tomlFile.set(
+        rootProject.layout.projectDirectory.file(
+            "wings.versions.toml"
+//            "gradle/libs.versions.toml"
+        )
+    )
+}

@@ -1,9 +1,9 @@
 #https://github.com/terrakok/kmp-awesome
 [versions]
-gene-conventions = "2026.03.01"
+gene-conventions = "2026.05.24"
 gene-cartoon = "1.1"
-gene-cubic = "1.1"
-gene-view-dsl = "1.2"
+gene-cubic = "1.0"
+gene-view-dsl = "1.0.7"
 gene-adapter = "2025.08.05"
 gene-spark = "1.0"
 gene-auto-service = "0.0.8"
@@ -12,17 +12,17 @@ gene-retrofit-ksp = "25.11.29"
 gene-retrofit-ksp-anno = "25.11.29"
 gene-replace = "0.8"
 
-ktx-activity = "1.12.4"
-ktx-core = "1.17.0"
-ktx-collection = "1.5.0"
+ktx-activity = "1.13.0"
+ktx-core = "1.18.0"
+ktx-collection = "1.6.0"
 ktx-preference = "1.2.1"
 ktx-dynamicanimation = "1.1.0"
-ktx-navigationFragment = "2.9.7"
+ktx-navigationFragment = "2.9.8"
 ktx-fragment = "1.8.9"
-ktx-navigation-ui = "2.9.7"
+ktx-navigation-ui = "2.9.8"
 ktx-palette = "1.0.0"
 ktx-transition = "1.7.0"
-ktx-work-runtime = "2.11.1"
+ktx-work-runtime = "2.11.2"
 
 androidx-lifecycle = "2.10.0"
 androidx-benchmark = "1.4.1"
@@ -32,59 +32,59 @@ androidx-window-ext = "1.0.0"
 androidx-profileinstaller = "1.4.1"
 androidx-core-splashscreen = "1.2.0"
 androidx-core-animation = "1.0.0"
-androidx-annotation = "1.9.1"
+androidx-annotation = "1.10.0"
 androidx-room = "2.8.4"
-androidx-datastore = "1.2.0"
+androidx-datastore = "1.2.1"
 androidx-test-ext = "1.3.0"
 androidx-test-espresso = "3.7.0"
 androidx-test-uiautomator = "2.3.0"
-androidx-paging = "3.4.1"
+androidx-paging = "3.5.0"
 androidx-appcompat = "1.7.1"
 androidx-dynamicanimation = "1.1.0"
 androidx-swiperefreshlayout = "1.2.0"
 androidx-recyclerview = "1.4.0"
 androidx-constraintlayout = "2.2.1"
 androidx-bluetooth = "1.0.0-alpha02"
-androidx-webkit = "1.15.0"
+androidx-webkit = "1.16.0"
 
-kotlinx-coroutines = "1.10.2"
-kotlinx-serialization = "1.10.0"
-kotlinx-datetime = "0.7.1"
-kotlinx-atomicfu = "0.31.0"
+kotlinx-coroutines = "1.11.0"
+kotlinx-serialization = "1.11.0"
+kotlinx-datetime = "0.8.0"
+kotlinx-atomicfu = "0.32.1"
 kotlinx-io = "0.9.0"
 
 # https://mvnrepository.com/artifact/androidx.compose/compose-bom
 # https://developer.android.com/develop/ui/compose/bom/bom-mapping
-androidx-compose-bom = "2026.02.01"
-androidx-compose-activity = "1.12.4"
+androidx-compose-bom = "2026.05.01"
+androidx-compose-activity = "1.13.0"
 androidx-compose-constraintlayout = "1.1.1"
-androidx-compose-navigation = "2.9.7"
+androidx-compose-navigation = "2.9.8"
 androidx-compose-hilt-navigation = "1.3.0"
 compose-coil = "2.7.0"
 
 google-auto-service-anno = "1.1.1"
-google-material = "1.13.0"
+google-material = "1.14.0"
 google-accompanist = "0.37.3"
 google-hilt = "2.59.2"
-google-protobuf = "4.34.0"
+google-protobuf = "4.35.0"
 
-squareup-poe = "2.2.0"
+squareup-poe = "2.3.0"
 okhttp-bom = "5.3.2"
 retrofit = "3.0.0"
 retrofit-kotlinx-serialization-converter = "1.0.0"
-koin-bom = "4.1.1"
-ktor = "3.4.0"
+koin-bom = "4.2.1"
+ktor = "3.5.0"
 lottie = "6.7.1"
 
-kmp-androidx-collection = "1.5.0"
-kmp-androidx-annotation = "1.9.1"
-kmp-androidx-datastore = "1.2.0"
-kmp-androidx-paging = "3.4.1"
+kmp-androidx-collection = "1.6.0"
+kmp-androidx-annotation = "1.10.0"
+kmp-androidx-datastore = "1.2.1"
+kmp-androidx-paging = "3.5.0"
 kmp-androidx-lifecycle = "2.10.0"
 kmp-compose-coil = "3.4.0"
 
-kotlin = "2.3.10" #必须同时修改对应的ksp版本
-google-ksp = "2.3.6"
+kotlin = "2.3.21" #必须同时修改对应的ksp版本
+google-ksp = "2.3.8"
 # https://github.com/google/ksp/releases/
 
 # https://developer.android.com/build/releases/gradle-plugin
@@ -92,12 +92,12 @@ google-ksp = "2.3.6"
 # https://developer.android.com/reference/tools/gradle-api
 # agp最佳教程
 # https://github.com/android/gradle-recipes
-android-gradle-plugin = "8.13.2"
-protobuf-plugin = "0.9.6"
+android-gradle-plugin = "9.2.1"
+protobuf-plugin = "0.10.0"
 
 #===========================
-plugin-publish = "2.0.0"
-kotlin-dsl = "6.5.3"
+plugin-publish = "2.1.1"
+kotlin-dsl = "6.7.0"
 #kotlin-dsl = "6.0.0"
 
 mockk = "1.14.9"
@@ -106,6 +106,16 @@ junit = "4.13.2"
 android-compileSdk = "36"
 android-minSdk = "29"
 android-targetSdk = "36"
+
+# ===新增===
+google-accompanist-flowlayout = "0.36.0"
+google-accompanist-insets = "0.30.1"
+google-accompanist-pager = "0.36.0"
+google-accompanist-pager-indicators = "0.36.0"
+google-accompanist-placeholder-material = "0.36.0"
+google-accompanist-swiperefresh = "0.36.0"
+google-accompanist-systemuicontroller = "0.36.0"
+google-accompanist-webview = "0.36.0"
 
 [libraries]
 gene-spark = { module = "io.github.5gene:spark", version.ref = "gene-spark" }
@@ -170,16 +180,16 @@ ksp-process-api = { module = "com.google.devtools.ksp:symbol-processing-api", ve
 ksp-poe = { module = "com.squareup:kotlinpoet-ksp", version.ref = "squareup-poe" }
 google-auto-service-anno = { module = "com.google.auto.service:auto-service-annotations", version.ref = "google-auto-service-anno" }
 google-material = { module = "com.google.android.material:material", version.ref = "google-material" }
-google-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "google-accompanist" }
-google-accompanist-pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "google-accompanist" }
-google-accompanist-placeholder-material = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "google-accompanist" }
+google-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "google-accompanist-systemuicontroller" }
+google-accompanist-pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "google-accompanist-pager-indicators" }
+google-accompanist-placeholder-material = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "google-accompanist-placeholder-material" }
 google-accompanist-drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "google-accompanist" }
-google-accompanist-flowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "google-accompanist" }
-google-accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "google-accompanist" }
-google-accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "google-accompanist" }
+google-accompanist-flowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "google-accompanist-flowlayout" }
+google-accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "google-accompanist-insets" }
+google-accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "google-accompanist-pager" }
 google-accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "google-accompanist" }
-google-accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "google-accompanist" }
-google-accompanist-webview = { module = "com.google.accompanist:accompanist-webview", version.ref = "google-accompanist" }
+google-accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "google-accompanist-swiperefresh" }
+google-accompanist-webview = { module = "com.google.accompanist:accompanist-webview", version.ref = "google-accompanist-webview" }
 google-dagger-hilt-core = { module = "com.google.dagger:hilt-core", version.ref = "google-hilt" }
 google-dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "google-hilt" }
 google-dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "google-hilt" }
@@ -224,8 +234,6 @@ androidx-compose-navigation = { module = "androidx.navigation:navigation-compose
 androidx-compose-hilt-navigation = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "androidx-compose-hilt-navigation" }
 
 #https://coil-kt.github.io/coil/compose/
-coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "compose-coil" }
-
 kmp-coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "kmp-compose-coil" }
 kmp-coil-compose-android = { module = "io.coil-kt.coil3:coil-compose-android", version.ref = "kmp-compose-coil" }
 
@@ -285,6 +293,7 @@ test-junit = { module = "junit:junit", version.ref = "junit" }
 test-mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 
 kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+plugin-publish = { group = "com.gradle.plugin-publish", name = "com.gradle.plugin-publish.gradle.plugin", version.ref = "plugin-publish" }
 
 [bundles]
 compose = [
