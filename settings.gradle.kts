@@ -25,7 +25,8 @@ dependencyResolutionManagement {
                 val formatter = DateTimeFormatter.ofPattern("yyyy.MM.dd")
                 return beijingTime.format(formatter)
             }
-            // overwrite the "groovy" version declared in the imported catalog
+            // overwrite the "gene-vcl" version declared in the imported catalog
+            // 复写 libs.versions.toml 中声明的 "gene-vcl" 的版本号，这样后续发布版本就不需要再手动更新版本号
             version("gene-vcl", beijingTimeVersion())
         }
     }

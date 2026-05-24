@@ -15,12 +15,12 @@ import java.time.format.DateTimeFormatter
 
 //vcl {
 //    onCreate {
-//        version("google-ksp", "2.2.0-2.0.2")  //gradle.kts
-//        it.version("google-ksp", "2.2.0-2.0.2") //gradle
+//        version("google-ksp", "2.2.0-2.0.2")  //gradle.kts 中的用法
+//        it.version("google-ksp", "2.2.0-2.0.2") //gradle 中的用法
 //    }
 //    doOverride {
-//        version("google-ksp", "2.2.0-2.0.2")  //gradle.kts
-//        version("google-ksp", "2.2.0-2.0.2") //gradle
+//        version("google-ksp", "2.2.0-2.0.2")  //gradle.kts 中的用法
+//        version("google-ksp", "2.2.0-2.0.2") //gradle 中的用法
 //    }
 //}
 interface VclOverride {
