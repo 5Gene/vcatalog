@@ -38,10 +38,11 @@ version = libs.versions.gene.vcl.get()
 
 publishMavenCentral("version catalog", "versionCatalog", false)
 
+// 其他项目中 AS 中搜索 Newer Library Versions Available 关闭 AS 自动检测，否则AS会自动检测toml中的版本号更新
+//todo 执行这个task 自动更新 wings.versions.toml 中需要升级的版本号
 tasks.register<UpdateVersionCatalogTask>(
     "updateVersionCatalog"
 ) {
-
     tomlFile.set(
         rootProject.layout.projectDirectory.file(
             "wings.versions.toml"
