@@ -2,7 +2,7 @@
 [versions]
 # version("gene-vcl", beijingTimeVersion()) 已经重写，这里可以不用改
 gene-vcl = "2025.11.29"
-gene-conventions = "2026.05.24-1"
+gene-conventions = "2026.05.26"
 build-config = "6.0.9"
 plugin-publish = "2.1.1"
 jetbrains-kotlin-jvm = "2.3.21"

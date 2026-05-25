@@ -1,11 +1,10 @@
 #https://github.com/terrakok/kmp-awesome
 [versions]
-gene-conventions = "2026.05.25"
+gene-conventions = "2026.05.26"
 gene-cartoon = "1.1"
 gene-cubic = "1.0"
 gene-view-dsl = "1.0.7"
 gene-adapter = "2025.08.05"
-gene-spark = "1.0"
 gene-auto-service = "0.0.8"
 gene-ksp-poe = "25.11.29"
 gene-retrofit-ksp = "25.11.29"
@@ -67,6 +66,10 @@ google-material = "1.14.0"
 google-accompanist = "0.37.3"
 google-hilt = "2.59.2"
 google-protobuf = "4.35.0"
+# 这个才是最新版本
+# https://mvnrepository.com/artifact/com.google.mediapipe/tasks-vision
+mediapipe-vision = "0.10.35"
+mlkit-segmentation = "16.0.0-beta6"
 
 squareup-poe = "2.3.0"
 okhttp-bom = "5.3.2"
@@ -96,7 +99,7 @@ android-gradle-plugin = "9.2.1"
 protobuf-plugin = "0.10.0"
 
 #===========================
-plugin-publish = "2.1.1"
+plugin-publish = "2.0.0"
 kotlin-dsl = "6.7.0"
 #kotlin-dsl = "6.0.0"
 
@@ -118,7 +121,6 @@ google-accompanist-systemuicontroller = "0.36.0"
 google-accompanist-webview = "0.36.0"
 
 [libraries]
-gene-spark = { module = "io.github.5gene:spark", version.ref = "gene-spark" }
 gene-cubic = { module = "io.github.5gene:cubic", version.ref = "gene-cubic" }
 gene-cartoon = { module = "io.github.5gene:cartoon", version.ref = "gene-cartoon" }
 gene-adapter = { module = "io.github.5gene:adapter", version.ref = "gene-adapter" }
@@ -195,6 +197,8 @@ google-dagger-hilt-android = { module = "com.google.dagger:hilt-android", versio
 google-dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "google-hilt" }
 protobuf-kotlin = { module = "com.google.protobuf:protobuf-kotlin", version.ref = "google-protobuf" }
 
+mediapipe-vision = { module = "com.google.mediapipe:tasks-vision", version.ref = "mediapipe-vision" }
+mlkit-segmentation = { module = "com.google.mlkit:segmentation-selfie", version.ref = "mlkit-segmentation" }
 
 # compose-bom start >>>>>>>>>>>>androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidx-compose-bom" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidx-compose-bom" }
@@ -349,8 +353,6 @@ android-view = [
     "lottie",
     "androidx-core-ktx",
     "androidx-viewpager2",
-    "androidx-fragment-ktx",
-    "androidx-activity-ktx",
     "androidx-recyclerview",
     "androidx-constraintlayout",
     "androidx-swiperefreshlayout",
@@ -449,7 +451,7 @@ android-application = { id = "com.android.application", version.ref = "android-g
 android-library = { id = "com.android.library", version.ref = "android-gradle-plugin" }
 android-test = { id = "com.android.test", version.ref = "android-gradle-plugin" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
-kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "google-ksp" }
