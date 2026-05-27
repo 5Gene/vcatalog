@@ -3,7 +3,7 @@
 gene-conventions = "2026.05.26"
 gene-cartoon = "1.1"
 gene-cubic = "1.0"
-gene-view-dsl = "1.0.7"
+gene-view-dsl = "1.2"
 gene-adapter = "2025.08.05"
 gene-auto-service = "0.0.8"
 gene-ksp-poe = "25.11.29"
@@ -104,14 +104,14 @@ android-gradle-plugin = "9.2.1"
 protobuf-plugin = "0.10.0"
 
 #===========================
-plugin-publish = "2.0.0"
+plugin-publish = "2.1.1"
 kotlin-dsl = "6.7.0"
 #kotlin-dsl = "6.0.0"
 
 mockk = "1.14.9"
 junit = "4.13.2"
 
-android-compileSdk = "36"
+android-compileSdk = "37"
 android-minSdk = "29"
 android-targetSdk = "36"
 
