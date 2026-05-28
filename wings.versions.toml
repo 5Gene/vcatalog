@@ -73,6 +73,8 @@ androidx-compose-material3-adaptive = "1.4.0"
 androidx-compose-ui-text-google-fonts = "1.11.2"
 androidx-navigation3 = "1.1.2"
 androidx-graphics-shapes = "1.1.0"
+androidx-graphics-path = "1.1.0"
+androidx-graphics-core = "1.0.4"
 
 # --- AndroidX 媒体 / 桌面小组件 / 测试 ---
 androidx-media3 = "1.10.1"
@@ -252,6 +254,8 @@ androidx-compose-material3-adaptive-navigation3 = { module = "androidx.compose.m
 androidx-navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "androidx-navigation3" } # 🧭 Navigation3 路由栈与状态，Compose 新导航（替代 Navigation2）时
 androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "androidx-navigation3" } # 🧭 Navigation3 UI 集成，声明 NavDisplay/导航图 UI 时
 androidx-graphics-shapes = { module = "androidx.graphics:graphics-shapes", version.ref = "androidx-graphics-shapes" } # 🔷 圆角/胶囊/Morph 形状 API，M3 自定义容器形状、图标轮廓时
+androidx-graphics-path = { module = "androidx.graphics:graphics-path", version.ref = "androidx-graphics-path" } # 🔷 提供了操作 Path 的高级 API。
+androidx-graphics-core = { module = "androidx.graphics:graphics-core", version.ref = "androidx-graphics-core" } # 🔷 基础组件。提供最底层的图形原语，如 Bitmap、Canvas 和 Paint 的扩展功能，是后两者的基础运行环境
 
 # --- AndroidX Media3 / Glance ---
 androidx-media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "androidx-media3" } # ▶️ 音视频播放内核，点播/直播、本地媒体播放模块时
