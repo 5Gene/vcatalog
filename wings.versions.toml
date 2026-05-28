@@ -445,6 +445,7 @@ android-basic = [
     "kotlinx-coroutines-android",
     "kotlinx-coroutines-core",
     "kotlinx-serialization-json",
+    "androidx-graphics-core",
 ]
 
 # 📋 View 常用控件包：Material + 列表/布局/刷新 + Lottie（XML 动效）
@@ -457,6 +458,8 @@ android-view = [
     "androidx-swiperefreshlayout",
     "androidx-emoji2-views",
     "lottie",
+    "androidx-graphics-shapes",
+    "androidx-graphics-path",
 ]
 
 # 🏗️ 传统 Android 工程一站式：≈ android-basic + android-view + Splash / LiveData
@@ -478,10 +481,11 @@ android-project = [
     "androidx-constraintlayout",
     "androidx-swiperefreshlayout",
     "androidx-emoji2-views",
-    "lottie",
     "kotlinx-coroutines-core",
     "kotlinx-coroutines-android",
     "kotlinx-serialization-json",
+    "androidx-graphics-shapes",
+    "androidx-graphics-path",
 ]
 
 # 🔌 按需引入：不默认打进 basic，避免全项目被动依赖
