@@ -1,5 +1,20 @@
-#https://github.com/terrakok/kmp-awesome
+# https://github.com/terrakok/kmp-awesome
+#
+# =============================================================================
+# [versions] 版本号分组说明
+#   - gene-*          : 5gene / 5hmlA 生态插件与 KSP 工具链
+#   - ktx-*           : AndroidX KTX 扩展
+#   - androidx-*      : AndroidX 官方库（按 UI / 数据 / 测试等分子组）
+#   - kotlinx-*       : Kotlin 官方扩展库
+#   - google-*        : Google Material / Accompanist / Hilt / Protobuf / ML
+#   - square / okhttp : Square 网络栈
+#   - koin / ktor     : 依赖注入与 KMP 网络
+#   - kmp-*           : Jetpack KMP 多平台库
+#   - kotlin / agp    : 编译工具链（改 kotlin 须同步 ksp）
+# =============================================================================
+
 [versions]
+# --- Gene 生态 ---
 gene-conventions = "2026.05.26"
 gene-cartoon = "1.1"
 gene-cubic = "1.0"
@@ -11,6 +26,7 @@ gene-retrofit-ksp = "25.11.29"
 gene-retrofit-ksp-anno = "25.11.29"
 gene-replace = "0.8"
 
+# --- AndroidX KTX ---
 ktx-activity = "1.13.0"
 ktx-core = "1.18.0"
 ktx-collection = "1.6.0"
@@ -21,101 +37,67 @@ ktx-palette = "1.0.0"
 ktx-transition = "1.7.0"
 ktx-work-runtime = "2.11.2"
 
+# --- AndroidX Lifecycle / 基础框架 ---
 androidx-lifecycle = "2.10.0"
-androidx-benchmark = "1.4.1"
-androidx-viewpager2 = "1.1.0"
-androidx-window = "1.5.1"
-androidx-window-ext = "1.0.0"
-androidx-profileinstaller = "1.4.1"
+androidx-annotation = "1.10.0"
+androidx-appcompat = "1.7.1"
 androidx-core-splashscreen = "1.2.0"
 androidx-core-animation = "1.0.0"
-androidx-annotation = "1.10.0"
+androidx-profileinstaller = "1.4.1"
+androidx-window = "1.5.1"
+androidx-window-ext = "1.0.0"
+androidx-emoji2 = "1.6.0"
+androidx-core-pip = "1.0.0-alpha02"
+androidx-bluetooth = "1.0.0-alpha02"
+androidx-webkit = "1.16.0"
+
+# --- AndroidX View 体系 UI ---
+androidx-viewpager2 = "1.1.0"
+androidx-recyclerview = "1.4.0"
+androidx-constraintlayout = "2.2.1"
+androidx-swiperefreshlayout = "1.2.0"
+androidx-dynamicanimation = "1.1.0"
+
+# --- AndroidX 数据 / 持久化 / 分页 ---
 androidx-room = "2.8.4"
 androidx-datastore = "1.2.1"
+androidx-paging = "3.5.0"
+
+# --- AndroidX Compose ---
+# https://mvnrepository.com/artifact/androidx.compose/compose-bom
+# https://developer.android.com/develop/ui/compose/bom/bom-mapping
+androidx-compose-bom = "2026.05.01"
+androidx-compose-activity = "1.13.0"
+androidx-compose-constraintlayout = "1.1.1"
+androidx-compose-material3-adaptive = "1.4.0"
+androidx-compose-ui-text-google-fonts = "1.11.2"
+androidx-navigation3 = "1.1.2"
+androidx-graphics-shapes = "1.1.0"
+
+# --- AndroidX 媒体 / 桌面小组件 / 测试 ---
+androidx-media3 = "1.10.1"
+androidx-glance = "1.1.1"
+androidx-benchmark = "1.4.1"
 androidx-test-ext = "1.3.0"
 androidx-test-espresso = "3.7.0"
 androidx-test-uiautomator = "2.3.0"
-androidx-paging = "3.5.0"
-androidx-appcompat = "1.7.1"
-androidx-dynamicanimation = "1.1.0"
-androidx-swiperefreshlayout = "1.2.0"
-androidx-recyclerview = "1.4.0"
-androidx-constraintlayout = "2.2.1"
-androidx-bluetooth = "1.0.0-alpha02"
-androidx-webkit = "1.16.0"
-androidx-glance = "1.1.1"
-androidx-compose-material3-adaptive = "1.4.0"
-androidx-graphics-shapes = "1.1.0"
-androidx-compose-ui-text-google-fonts = "1.11.2"
-androidx-navigation3 = "1.1.2"
-androidx-media3 = "1.10.1"
-androidx-core-pip = "1.0.0-alpha02"
-androidx-emoji2 = "1.6.0"
-androidx-compose-material-icons-extended = "1.7.8"
 
+# --- Kotlin / KotlinX ---
+kotlin = "2.3.21" # 必须同时修改对应的 ksp 版本
+google-ksp = "2.3.8"
+# https://github.com/google/ksp/releases/
 kotlinx-coroutines = "1.11.0"
 kotlinx-serialization = "1.11.0"
 kotlinx-datetime = "0.8.0"
 kotlinx-atomicfu = "0.32.1"
 kotlinx-io = "0.9.0"
 
-# https://mvnrepository.com/artifact/androidx.compose/compose-bom
-# https://developer.android.com/develop/ui/compose/bom/bom-mapping
-androidx-compose-bom = "2026.05.01"
-androidx-compose-activity = "1.13.0"
-androidx-compose-constraintlayout = "1.1.1"
-compose-coil = "2.7.0"
-
+# --- Google Material / Accompanist / DI / Protobuf / ML ---
 google-auto-service-anno = "1.1.1"
 google-material = "1.14.0"
 google-accompanist = "0.37.3"
 google-hilt = "2.59.2"
 google-protobuf = "4.35.0"
-# 这个才是最新版本
-# https://mvnrepository.com/artifact/com.google.mediapipe/tasks-vision
-mediapipe-vision = "0.10.35"
-mlkit-segmentation = "16.0.0-beta6"
-
-squareup-poe = "2.3.0"
-okhttp-bom = "5.3.2"
-retrofit = "3.0.0"
-retrofit-kotlinx-serialization-converter = "1.0.0"
-koin-bom = "4.2.1"
-ktor = "3.5.0"
-lottie = "6.7.1"
-
-kmp-androidx-collection = "1.6.0"
-kmp-androidx-annotation = "1.10.0"
-kmp-androidx-datastore = "1.2.1"
-kmp-androidx-paging = "3.5.0"
-kmp-androidx-lifecycle = "2.10.0"
-kmp-compose-coil = "3.4.0"
-
-kotlin = "2.3.21" #必须同时修改对应的ksp版本
-google-ksp = "2.3.8"
-# https://github.com/google/ksp/releases/
-
-# https://developer.android.com/build/releases/gradle-plugin
-# 8.12 == 8.13
-# https://developer.android.com/reference/tools/gradle-api
-# agp最佳教程
-# https://github.com/android/gradle-recipes
-android-gradle-plugin = "9.2.1"
-protobuf-plugin = "0.10.0"
-
-#===========================
-plugin-publish = "2.1.1"
-kotlin-dsl = "6.7.0"
-#kotlin-dsl = "6.0.0"
-
-mockk = "1.14.9"
-junit = "4.13.2"
-
-android-compileSdk = "37"
-android-minSdk = "29"
-android-targetSdk = "36"
-
-# ===新增===
 google-accompanist-flowlayout = "0.36.0"
 google-accompanist-insets = "0.30.1"
 google-accompanist-pager = "0.36.0"
@@ -124,199 +106,272 @@ google-accompanist-placeholder-material = "0.36.0"
 google-accompanist-swiperefresh = "0.36.0"
 google-accompanist-systemuicontroller = "0.36.0"
 google-accompanist-webview = "0.36.0"
+# https://mvnrepository.com/artifact/com.google.mediapipe/tasks-vision
+mediapipe-vision = "0.10.35"
+mlkit-segmentation = "16.0.0-beta6"
+
+# --- 网络 / DI / 动画 ---
+squareup-poe = "2.3.0"
+okhttp-bom = "5.3.2"
+retrofit = "3.0.0"
+retrofit-kotlinx-serialization-converter = "1.0.0"
+koin-bom = "4.2.1"
+ktor = "3.5.0"
+lottie = "6.7.1"
+
+# --- Jetpack KMP ---
+kmp-androidx-collection = "1.6.0"
+kmp-androidx-annotation = "1.10.0"
+kmp-androidx-datastore = "1.2.1"
+kmp-androidx-paging = "3.5.0"
+kmp-androidx-lifecycle = "2.10.0"
+kmp-compose-coil = "3.4.0"
+
+# --- Gradle 插件 / 发布 ---
+# https://developer.android.com/build/releases/gradle-plugin
+android-gradle-plugin = "9.2.1"
+protobuf-plugin = "0.10.0"
+plugin-publish = "2.1.1"
+kotlin-dsl = "6.7.0"
+
+# --- 单元测试 ---
+mockk = "1.14.9"
+junit = "4.13.2"
+
+# --- SDK 版本 ---
+android-compileSdk = "37"
+android-minSdk = "29"
+android-targetSdk = "36"
+
+# =============================================================================
+# [libraries] 依赖分组说明
+#   非常用库行尾注释说明「什么时候该用」；core/appcompat/recyclerview/compose 主栈等常用项不加注释
+#   gene-* | androidx-* | google-* | compose-bom | kmp-* | network | koin | test
+# =============================================================================
 
 [libraries]
-gene-cubic = { module = "io.github.5gene:cubic", version.ref = "gene-cubic" }
-gene-cartoon = { module = "io.github.5gene:cartoon", version.ref = "gene-cartoon" }
-gene-adapter = { module = "io.github.5gene:adapter", version.ref = "gene-adapter" }
-gene-view-dsl = { module = "io.github.5gene:view-dsl", version.ref = "gene-view-dsl" }
-gene-conventions = { module = "io.github.5hmlA:conventions", version.ref = "gene-conventions" }
-gene-auto-service = { module = "io.github.5hmla:auto-service", version.ref = "gene-auto-service" }
-gene-ksp-poe = { module = "io.github.5gene:ksp-poe", version.ref = "gene-ksp-poe" }
-gene-retrofit-ksp-anno = { module = "io.github.5gene:retrofit-ksp-anno", version.ref = "gene-retrofit-ksp-anno" }
-gene-retrofit-ksp = { module = "io.github.5gene:retrofit-ksp", version.ref = "gene-retrofit-ksp" }
+# --- Gene 生态 ---
+gene-cubic = { module = "io.github.5gene:cubic", version.ref = "gene-cubic" } # 🧊 Gene 内部轻量工具，已接 Gene 约定插件的基础模块时
+gene-cartoon = { module = "io.github.5gene:cartoon", version.ref = "gene-cartoon" } # 🎨 Gene 卡通/帧动画封装，业务要用 Gene 动画组件而非自写 Lottie 时
+gene-adapter = { module = "io.github.5gene:adapter", version.ref = "gene-adapter" } # 🔌 多类型 RecyclerView 适配器 DSL，复杂列表多种 Item 类型时
+gene-view-dsl = { module = "io.github.5gene:view-dsl", version.ref = "gene-view-dsl" } # 📝 XML/View 声明式 DSL，传统 View 项目减少 findViewById 样板时
+gene-conventions = { module = "io.github.5hmlA:conventions", version.ref = "gene-conventions" } # ⚙️ Gradle 约定插件本体，根工程统一 Android/Compose/KSP 配置时
+gene-auto-service = { module = "io.github.5hmla:auto-service", version.ref = "gene-auto-service" } # 🤖 Gene 版 AutoService KSP，与 gene 插件链一起注册 SPI 时
+gene-ksp-poe = { module = "io.github.5gene:ksp-poe", version.ref = "gene-ksp-poe" } # ✍️ KSP 生成 Kotlin 代码，自研注解处理器基于 KotlinPoet 时
+gene-retrofit-ksp-anno = { module = "io.github.5gene:retrofit-ksp-anno", version.ref = "gene-retrofit-ksp-anno" } # 🏷️ Retrofit KSP 注解定义，接口声明式 HTTP 客户端时
+gene-retrofit-ksp = { module = "io.github.5gene:retrofit-ksp", version.ref = "gene-retrofit-ksp" } # 🌐 Retrofit KSP 处理器，编译期生成 API 实现替代手写时
 
+# --- AndroidX 核心 / KTX（非 UI 控件）---
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "ktx-core" }
-androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "androidx-room" }
-androidx-palette-ktx = { module = "androidx.palette:palette-ktx", version.ref = "ktx-palette" }
-androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "ktx-fragment" }
+androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "androidx-annotation" }
 androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "ktx-activity" }
-androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "ktx-work-runtime" }
-androidx-preference-ktx = { module = "androidx.preference:preference-ktx", version.ref = "ktx-preference" }
-androidx-collection-ktx = { module = "androidx.collection:collection-ktx", version.ref = "ktx-collection" }
-androidx-transition-ktx = { module = "androidx.transition:transition-ktx", version.ref = "ktx-transition" }
-androidx-paging-common-ktx = { module = "androidx.paging:paging-common-ktx", version.ref = "androidx-paging" }
-androidx-paging-runtime-ktx = { module = "androidx.paging:paging-runtime-ktx", version.ref = "androidx-paging" }
+androidx-fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "ktx-fragment" }
+androidx-collection-ktx = { module = "androidx.collection:collection-ktx", version.ref = "ktx-collection" } # 📚 集合 KTX（SparseArray/ArrayMap 等），非 UI 层处理大量键值数据时用
+androidx-preference-ktx = { module = "androidx.preference:preference-ktx", version.ref = "ktx-preference" } # ⚙️ 系统设置页 PreferenceScreen，做「设置」模块且用 XML Preference 时
+androidx-transition-ktx = { module = "androidx.transition:transition-ktx", version.ref = "ktx-transition" } # 🎭 Activity/Fragment 共享元素与场景转场，自定义页面切换动画时
+androidx-work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "ktx-work-runtime" } # ⏰ 后台定时/约束任务（同步、上传），需 WorkManager 调度时
+androidx-work-runtime = { module = "androidx.work:work-runtime", version.ref = "ktx-work-runtime" } # ⏰ 非 KTX 工程或 Java 模块引 WorkManager 时用
+androidx-palette-ktx = { module = "androidx.palette:palette-ktx", version.ref = "ktx-palette" } # 🎨 从 Bitmap 取主色/强调色，动态主题、取色壁纸、封面吸色时用
+androidx-core-animation = { module = "androidx.core:core-animation", version.ref = "androidx-core-animation" } # 🎬 View 属性动画底层 API，自定义 Animator 且需兼容旧 API 时
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "androidx-core-splashscreen" } # 🚀 Android 12+ 启动屏适配，替换旧 theme windowBackground 方案
+androidx-profileinstaller = { module = "androidx.profileinstaller:profileinstaller", version.ref = "androidx-profileinstaller" } # 📈 安装 Baseline Profile，做启动/滑动性能优化、发版前性能专项时
+androidx-window = { module = "androidx.window:window", version.ref = "androidx-window" } # 📱 读折叠屏/分屏/窗口尺寸，平板横竖屏、多窗口布局适配时
+androidx-window-ext = { module = "androidx.window.extensions.core:core", version.ref = "androidx-window-ext" } # 🪟 OEM Window 扩展能力，深度适配特定厂商大屏特性时
+androidx-core-pip = { module = "androidx.core:core-pip", version.ref = "androidx-core-pip" } # 🖼️ 画中画 PiP，视频播放、导航继续用小窗时
+androidx-bluetooth = { module = "androidx.bluetooth:bluetooth", version.ref = "androidx-bluetooth" } # 📶 新 Bluetooth API（alpha），BLE 直连且评估替代旧 BluetoothAdapter 时
+androidx-emoji2-views = { module = "androidx.emoji2:emoji2-views", version.ref = "androidx-emoji2" } # 😀 Emoji2 兼容层，TextView 在 Android 12 以下也要正确显示新表情时
+
+# --- AndroidX Lifecycle ---
 androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "androidx-lifecycle" }
 androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "androidx-lifecycle" }
-androidx-dynamicanimation-ktx = { module = "androidx.dynamicanimation:dynamicanimation-ktx", version.ref = "ktx-dynamicanimation" }
-
-androidx-webkit = { module = "androidx.webkit:webkit", version.ref = "androidx-webkit" }
-androidx-window = { module = "androidx.window:window", version.ref = "androidx-window" }
-androidx-room-common = { module = "androidx.room:room-common", version.ref = "androidx-room" }
-androidx-room-paging = { module = "androidx.room:room-paging", version.ref = "androidx-room" }
-androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "androidx-room" }
-androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "androidx-room" }
-androidx-test-ext-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-test-ext" }
-androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
-androidx-bluetooth = { module = "androidx.bluetooth:bluetooth", version.ref = "androidx-bluetooth" }
-androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "androidx-viewpager2" }
-androidx-paging-runtime = { module = "androidx.paging:paging-runtime", version.ref = "androidx-paging" }
-androidx-paging-compose = { module = "androidx.paging:paging-compose", version.ref = "androidx-paging" }
-androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "androidx-annotation" }
-androidx-window-ext = { module = "androidx.window.extensions.core:core", version.ref = "androidx-window-ext" }
-androidx-core-animation = { module = "androidx.core:core-animation", version.ref = "androidx-core-animation" }
-androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "androidx-recyclerview" }
-androidx-datastore = { module = "androidx.datastore:datastore-preferences-core", version.ref = "androidx-datastore" }
-androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "androidx-core-splashscreen" }
-androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-test-espresso" }
-androidx-test-uiautomator = { module = "androidx.test.uiautomator:uiautomator", version.ref = "androidx-test-uiautomator" }
-androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "androidx-datastore" }
-androidx-benchmark-macro-junit4 = { module = "androidx.benchmark:benchmark-macro-junit4", version.ref = "androidx-benchmark" }
-androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidx-constraintlayout" }
-androidx-dynamicanimation = { module = "androidx.dynamicanimation:dynamicanimation", version.ref = "androidx-dynamicanimation" }
-androidx-profileinstaller = { module = "androidx.profileinstaller:profileinstaller", version.ref = "androidx-profileinstaller" }
-androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
-androidx-swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "androidx-swiperefreshlayout" }
 androidx-lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "androidx-lifecycle" }
-androidx-glance-appwidget = { module = "androidx.glance:glance-appwidget", version.ref = "androidx-glance" }
-androidx-glance-material3 = { module = "androidx.glance:glance-material3", version.ref = "androidx-glance" }
-androidx-compose-material3-adaptive-navigation-suite = { module = "androidx.compose.material3:material3-adaptive-navigation-suite-android", version.ref = "androidx-compose-material3-adaptive" }
-androidx-graphics-shapes = { module = "androidx.graphics:graphics-shapes", version.ref = "androidx-graphics-shapes" }
-androidx-compose-ui-text-google-fonts = { module = "androidx.compose.ui:ui-text-google-fonts", version.ref = "androidx-compose-ui-text-google-fonts" }
-androidx-navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "androidx-navigation3" }
-androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "androidx-navigation3" }
-androidx-lifecycle-viewmodel-navigation3 = { module = "androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "androidx-lifecycle" }
-androidx-compose-material3-adaptive-navigation3 = { module = "androidx.compose.material3:material3-adaptive-navigation3", version.ref = "androidx-compose-material3-adaptive" }
-androidx-media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "androidx-media3" }
-androidx-media3-common = { module = "androidx.media3:media3-common", version.ref = "androidx-media3" }
-androidx-media3-ui = { module = "androidx.media3:media3-ui", version.ref = "androidx-media3" }
-androidx-media3-ui-compose-material3 = { module = "androidx.media3:media3-ui-compose-material3", version.ref = "androidx-media3" }
-androidx-core-pip = { module = "androidx.core:core-pip", version.ref = "androidx-core-pip" }
-androidx-emoji2-views = { module = "androidx.emoji2:emoji2-views", version.ref = "androidx-emoji2" }
-androidx-work-runtime = { module = "androidx.work:work-runtime", version.ref = "ktx-work-runtime" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "androidx-lifecycle" }
+androidx-lifecycle-viewmodel-navigation3 = { module = "androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "androidx-lifecycle" } # 🧭 配合 Navigation3 作用域注入/保存 ViewModel 时
 
-ksp-process-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "google-ksp" }
-ksp-poe = { module = "com.squareup:kotlinpoet-ksp", version.ref = "squareup-poe" }
-google-auto-service-anno = { module = "com.google.auto.service:auto-service-annotations", version.ref = "google-auto-service-anno" }
-google-material = { module = "com.google.android.material:material", version.ref = "google-material" }
-google-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "google-accompanist-systemuicontroller" }
-google-accompanist-pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "google-accompanist-pager-indicators" }
-google-accompanist-placeholder-material = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "google-accompanist-placeholder-material" }
-google-accompanist-drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "google-accompanist" }
-google-accompanist-flowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "google-accompanist-flowlayout" }
-google-accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "google-accompanist-insets" }
-google-accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "google-accompanist-pager" }
-google-accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "google-accompanist" }
-google-accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "google-accompanist-swiperefresh" }
-google-accompanist-webview = { module = "com.google.accompanist:accompanist-webview", version.ref = "google-accompanist-webview" }
-google-dagger-hilt-core = { module = "com.google.dagger:hilt-core", version.ref = "google-hilt" }
-google-dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "google-hilt" }
-google-dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "google-hilt" }
-protobuf-kotlin = { module = "com.google.protobuf:protobuf-kotlin", version.ref = "google-protobuf" }
+# --- AndroidX View 体系 UI ---
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "androidx-appcompat" }
+androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "androidx-viewpager2" }
+androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "androidx-recyclerview" }
+androidx-constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "androidx-constraintlayout" }
+androidx-swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "androidx-swiperefreshlayout" }
+androidx-dynamicanimation = { module = "androidx.dynamicanimation:dynamicanimation", version.ref = "androidx-dynamicanimation" } # 🌀 弹簧/惯性物理动画（SpringAnimation、FlingAnimation），FAB 滑入、BottomBar 收起等要「自然回弹」时用
+androidx-dynamicanimation-ktx = { module = "androidx.dynamicanimation:dynamicanimation-ktx", version.ref = "ktx-dynamicanimation" } # 🌀 dynamicanimation 的 Kotlin 扩展，同上场景优先引 ktx
+androidx-webkit = { module = "androidx.webkit:webkit", version.ref = "androidx-webkit" } # 🌍 WebView 进程隔离、Cookie、Safe Browsing 等，内嵌 H5/混合页面且要新 WebView 能力时
 
-mediapipe-vision = { module = "com.google.mediapipe:tasks-vision", version.ref = "mediapipe-vision" }
-mlkit-segmentation = { module = "com.google.mlkit:segmentation-selfie", version.ref = "mlkit-segmentation" }
+# --- AndroidX 数据 / Room / Paging / DataStore ---
+androidx-room-common = { module = "androidx.room:room-common", version.ref = "androidx-room" } # 🗃️ Room 注解与公共类型，KMP 共享层或自定义 Room 编译链路时
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "androidx-room" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "androidx-room" }
+androidx-room-paging = { module = "androidx.room:room-paging", version.ref = "androidx-room" } # 📄 Room 查询结果接 Paging3，数据库分页列表（RecyclerView/Compose）时
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "androidx-room" } # 🔧 Room 注解处理器，ksp/room 插件生成 DAO 实现时
+androidx-datastore = { module = "androidx.datastore:datastore-preferences-core", version.ref = "androidx-datastore" } # 💾 Preferences DataStore 核心（无 Android 依赖），KMP common 层存配置时
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "androidx-datastore" }
+androidx-paging-common-ktx = { module = "androidx.paging:paging-common-ktx", version.ref = "androidx-paging" } # 📃 Paging 核心逻辑，ViewModel/Repository 组装 PagingSource 时
+androidx-paging-runtime-ktx = { module = "androidx.paging:paging-runtime-ktx", version.ref = "androidx-paging" } # 📃 RecyclerView + Paging3，传统 View 长列表分页时
+androidx-paging-runtime = { module = "androidx.paging:paging-runtime", version.ref = "androidx-paging" } # 📃 非 KTX 或 Java 模块接 Paging 时用
+androidx-paging-compose = { module = "androidx.paging:paging-compose", version.ref = "androidx-paging" } # ♾️ LazyColumn 分页列表，Compose 长列表接 Flow<PagingData> 时
 
-# compose-bom start >>>>>>>>>>>>androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "androidx-compose-bom" }
+# --- AndroidX Compose BOM 内库（版本由 bom 对齐；ui/runtime/foundation/material3 为常用项不加注释）---
+# compose-bom start >>>>>>>>>>>>
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidx-compose-bom" }
 androidx-compose-ui = { module = "androidx.compose.ui:ui" }
-# compose-ui内部有依赖以下几个
-androidx-compose-ui-util = { module = "androidx.compose.ui:ui-util" }
-androidx-compose-ui-unit = { module = "androidx.compose.ui:ui-unit" }
-androidx-compose-ui-text = { module = "androidx.compose.ui:ui-text" }
+# compose-ui 内部有依赖以下几个
+androidx-compose-ui-util = { module = "androidx.compose.ui:ui-util" } # 🧰 显式依赖 Compose 工具类（如 List 快速操作）时；一般 ui 已传递
+androidx-compose-ui-unit = { module = "androidx.compose.ui:ui-unit" } # 📏 Dp/Sp 等单位类型单独暴露给非 ui 模块时
+androidx-compose-ui-text = { module = "androidx.compose.ui:ui-text" } # ✍️ 纯文本排版/Paragraph 逻辑层，不引完整 ui 组件时
 androidx-compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
-androidx-compose-ui-geometry = { module = "androidx.compose.ui:ui-geometry" }
-# compose-ui内部有依赖以上几个
+androidx-compose-ui-geometry = { module = "androidx.compose.ui:ui-geometry" } # 📐 Offset/Size/Rect 等几何类型，自定义绘制或动画数学时
+# compose-ui 内部有依赖以上几个
 androidx-compose-runtime = { module = "androidx.compose.runtime:runtime" }
 androidx-compose-foundation = { module = "androidx.compose.foundation:foundation" }
 androidx-compose-foundation-layout = { module = "androidx.compose.foundation:foundation-layout" }
-androidx-compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata" }
-androidx-compose-animation = { module = "androidx.compose.animation:animation" }
-androidx-compose-animation-core = { module = "androidx.compose.animation:animation-core" }
-androidx-compose-animation-graphics = { module = "androidx.compose.animation:animation-graphics" }
-androidx-compose-material = { module = "androidx.compose.material:material" }
-androidx-compose-material-ripple = { module = "androidx.compose.material:material-ripple" }
+androidx-compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata" } # 🔗 旧代码 LiveData 观察进 Compose，渐进迁移、暂不能改 Flow 时
+androidx-compose-animation = { module = "androidx.compose.animation:animation" } # 💫 AnimatedVisibility/Crossfade 等，Compose 组件进出场动画时
+androidx-compose-animation-core = { module = "androidx.compose.animation:animation-core" } # 💫 Animatable/Transition 底层，自定义 Compose 动画曲线时
+androidx-compose-animation-graphics = { module = "androidx.compose.animation:animation-graphics" } # 🎞️ 矢量路径 Morph 动画，图标形状变换等复杂动效时
 androidx-compose-material-icons-core = { module = "androidx.compose.material:material-icons-core" }
-androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" }
+androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended" } # 📦 全量 Material 图标，图标种类多、可接受包体增大时
 androidx-compose-material3 = { module = "androidx.compose.material3:material3" }
-androidx-compose-material3-window-size = { module = "androidx.compose.material3:material3-window-size-class" }
-androidx-compose-ui-viewbinding = { module = "androidx.compose.ui:ui-viewbinding" }
-androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
-androidx-compose-ui-tooling-data = { module = "androidx.compose.ui:ui-tooling-data" }
+androidx-compose-material3-window-size = { module = "androidx.compose.material3:material3-window-size-class" } # 📐 WindowSizeClass 响应式布局，平板/折叠屏 Compose 分栏时
+androidx-compose-ui-viewbinding = { module = "androidx.compose.ui:ui-viewbinding" } # 🔀 Compose 嵌 AndroidView/XML，混合页面或逐步替换 View 时
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" } # 🛠️ Preview/Layout Inspector，debugImplementation 调试 Compose 时
+androidx-compose-ui-tooling-data = { module = "androidx.compose.ui:ui-tooling-data" } # 🛠️ 预览数据与组合检查，编写 @Preview 参数化预览时
 androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
-androidx-compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" }
-androidx-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" }
+androidx-compose-ui-test-junit4 = { module = "androidx.compose.ui:ui-test-junit4" } # 🧪 Compose UI 单测/仪器测试，androidTest 写 composeTestRule 时
+androidx-compose-ui-test-manifest = { module = "androidx.compose.ui:ui-test-manifest" } # 🧪 测试 Activity 清单合并，Compose 仪器测试 debug 包用
 # compose-bom end >>>>>>>>>>>>
 
-androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidx-lifecycle" }
+# --- Compose 扩展（版本独立，不在 bom 或需显式版本）---
 androidx-compose-activity = { module = "androidx.activity:activity-compose", version.ref = "androidx-compose-activity" }
 androidx-compose-constraintlayout = { module = "androidx.constraintlayout:constraintlayout-compose", version.ref = "androidx-compose-constraintlayout" }
+androidx-compose-ui-text-google-fonts = { module = "androidx.compose.ui:ui-text-google-fonts", version.ref = "androidx-compose-ui-text-google-fonts" } # 🔤 运行时下载 Google Fonts，品牌字体非系统内置时
+androidx-compose-material3-adaptive-navigation-suite = { module = "androidx.compose.material3:material3-adaptive-navigation-suite-android", version.ref = "androidx-compose-material3-adaptive" } # 📲 手机 BottomBar / 平板 Rail / 大屏 Drawer 自适应导航，大屏多形态导航壳时
+androidx-compose-material3-adaptive-navigation3 = { module = "androidx.compose.material3:material3-adaptive-navigation3", version.ref = "androidx-compose-material3-adaptive" } # 📲 Navigation3 + 自适应导航壳，新项目大屏路由一体方案时
+androidx-navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "androidx-navigation3" } # 🧭 Navigation3 路由栈与状态，Compose 新导航（替代 Navigation2）时
+androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "androidx-navigation3" } # 🧭 Navigation3 UI 集成，声明 NavDisplay/导航图 UI 时
+androidx-graphics-shapes = { module = "androidx.graphics:graphics-shapes", version.ref = "androidx-graphics-shapes" } # 🔷 圆角/胶囊/Morph 形状 API，M3 自定义容器形状、图标轮廓时
 
-#https://coil-kt.github.io/coil/compose/
-kmp-coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "kmp-compose-coil" }
-kmp-coil-compose-android = { module = "io.coil-kt.coil3:coil-compose-android", version.ref = "kmp-compose-coil" }
+# --- AndroidX Media3 / Glance ---
+androidx-media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "androidx-media3" } # ▶️ 音视频播放内核，点播/直播、本地媒体播放模块时
+androidx-media3-common = { module = "androidx.media3:media3-common", version.ref = "androidx-media3" } # ▶️ Media3 公共类型与配置，自定义 Player/TrackSelector 时
+androidx-media3-ui = { module = "androidx.media3:media3-ui", version.ref = "androidx-media3" } # ▶️ 传统 View 播放器控件（PlayerView），非 Compose 播放页时
+androidx-media3-ui-compose-material3 = { module = "androidx.media3:media3-ui-compose-material3", version.ref = "androidx-media3" } # ▶️ M3 风格 Compose 播放器 UI，Compose 视频页时
+androidx-glance-appwidget = { module = "androidx.glance:glance-appwidget", version.ref = "androidx-glance" } # 🏠 Glance 桌面小组件，开发 App Widget（非 RemoteViews XML）时
+androidx-glance-material3 = { module = "androidx.glance:glance-material3", version.ref = "androidx-glance" } # 🏠 Glance M3 主题组件，小组件要跟 App M3 配色一致时
 
-#The following Jetpack libraries provide KMP support:
-#https://github.com/terrakok/kmp-awesome
+# --- Google Material / Accompanist / Hilt / Protobuf / ML ---
+google-material = { module = "com.google.android.material:material", version.ref = "google-material" }
+google-auto-service-anno = { module = "com.google.auto.service:auto-service-annotations", version.ref = "google-auto-service-anno" } # 🏭 @AutoService 编译期注册 SPI，KSP/插件自动发现实现类时
+google-dagger-hilt-core = { module = "com.google.dagger:hilt-core", version.ref = "google-hilt" } # 💉 Hilt 核心（非 Android），纯 JVM 模块或测试共用 DI 时
+google-dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "google-hilt" } # 💉 Hilt Android 运行时，Activity/Application 注入选 Hilt 时
+google-dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "google-hilt" } # 💉 Hilt 注解处理器，ksp/hilt 插件生成组件时
+protobuf-kotlin = { module = "com.google.protobuf:protobuf-kotlin", version.ref = "google-protobuf" } # 📦 Protobuf Kotlin 生成类，gRPC/本地 .proto 序列化且用 kotlin  DSL 时
+mediapipe-vision = { module = "com.google.mediapipe:tasks-vision", version.ref = "mediapipe-vision" } # 👁️ 端侧视觉 Pipeline（检测/手势/分割），相机实时 AI 且要 MediaPipe 方案时
+mlkit-segmentation = { module = "com.google.mlkit:segmentation-selfie", version.ref = "mlkit-segmentation" } # ✂️ ML Kit 人像分割，抠图、背景虚化、贴纸换背景时
+google-accompanist-drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "google-accompanist" } # 🖼️ Compose 加载 VectorDrawable/AnimatedVectorDrawable，复用 XML 矢量资源时
+google-accompanist-flowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "google-accompanist-flowlayout" } # 🏷️ 流式/标签云布局，筛选项、关键词换行排列时（官方 FlowRow 未覆盖的遗留场景）
+google-accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "google-accompanist-insets" } # 📏 Compose 系统栏 Insets 适配，快速处理 statusBar/navBar padding 时
+google-accompanist-pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "google-accompanist-pager" } # 📑 Compose 横向翻页容器，Banner/引导页滑动切换时
+google-accompanist-pager-indicators = { module = "com.google.accompanist:accompanist-pager-indicators", version.ref = "google-accompanist-pager-indicators" } # 📑 配合 accompanist-pager 的圆点指示器，轮播页码展示时
+google-accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "google-accompanist" } # 🔐 Compose 权限请求与 rationale UI，Camera/定位等运行时权限弹窗时
+google-accompanist-placeholder-material = { module = "com.google.accompanist:accompanist-placeholder-material", version.ref = "google-accompanist-placeholder-material" } # ⏳ 列表/详情骨架屏 Shimmer，网络加载占位动画时
+google-accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "google-accompanist-swiperefresh" } # 🔄 Compose 下拉刷新列表，feed 流刷新交互时
+google-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "google-accompanist-systemuicontroller" } # 🎨 动态改状态栏/导航栏颜色，沉浸式页面与内容区同色时
+google-accompanist-webview = { module = "com.google.accompanist:accompanist-webview", version.ref = "google-accompanist-webview" } # 🌐 Compose 嵌入 WebView，H5 页在 Compose 导航栈内时
+
+# --- Coil 图片（Compose）---
+# https://coil-kt.github.io/coil/compose/
+kmp-coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "kmp-compose-coil" } # 🖼️ Coil3 Compose 多平台 API，KMP common 层加载网络/本地图时
+kmp-coil-compose-android = { module = "io.coil-kt.coil3:coil-compose-android", version.ref = "kmp-compose-coil" } # 🖼️ Coil3 Android 实现，纯 Android Compose 列表头像/封面 AsyncImage 时
+
+# --- Jetpack KMP ---
+# https://github.com/terrakok/kmp-awesome
 # https://developer.android.google.cn/kotlin/multiplatform
-kmp-androidx-paging = { module = "androidx.paging:paging-common", version.ref = "kmp-androidx-paging" }
-kmp-androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "kmp-androidx-annotation" }
-kmp-androidx-collection-ktx = { module = "androidx.collection:collection-ktx", version.ref = "kmp-androidx-collection" }
-kmp-androidx-lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", version.ref = "kmp-androidx-lifecycle" }
-kmp-androidx-datastore = { module = "androidx.datastore:datastore-preferences-core", version.ref = "kmp-androidx-datastore" }
-kmp-androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "kmp-androidx-lifecycle" }
-kmp-androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "kmp-androidx-lifecycle" }
-kmp-androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "kmp-androidx-lifecycle" }
-kmp-androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "kmp-androidx-lifecycle" }
-kmp-androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "kmp-androidx-lifecycle" }
-kmp-androidx-lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "kmp-androidx-lifecycle" }
+kmp-androidx-paging = { module = "androidx.paging:paging-common", version.ref = "kmp-androidx-paging" } # 🌐 KMP common 分页逻辑，shared 层 PagingSource 时
+kmp-androidx-annotation = { module = "androidx.annotation:annotation", version.ref = "kmp-androidx-annotation" } # 🌐 KMP common 注解，跨平台模块用 @Stable/@Immutable 时
+kmp-androidx-collection-ktx = { module = "androidx.collection:collection-ktx", version.ref = "kmp-androidx-collection" } # 🌐 KMP common 集合扩展，shared 层数据结构时
+kmp-androidx-datastore = { module = "androidx.datastore:datastore-preferences-core", version.ref = "kmp-androidx-datastore" } # 🌐 KMP Preferences DataStore core，common 存用户配置时
+kmp-androidx-lifecycle-process = { module = "androidx.lifecycle:lifecycle-process", version.ref = "kmp-androidx-lifecycle" } # 🔄 ProcessLifecycleOwner，监听整 App 前后台（非单 Activity）时
+kmp-androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "kmp-androidx-lifecycle" } # 🌐 KMP Android 端 lifecycle，shared 引 Android lifecycle 桥时
+kmp-androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx", version.ref = "kmp-androidx-lifecycle" } # 🌐 KMP 模块仍用 LiveData 观察，Android 壳层迁移期
+kmp-androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "kmp-androidx-lifecycle" } # 🌐 KMP Android ViewModel，shared ViewModel 放 Android 源集时
+kmp-androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "kmp-androidx-lifecycle" } # 🌐 KMP Compose lifecycle 感知，common Compose 用 LocalLifecycleOwner 时
+kmp-androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "kmp-androidx-lifecycle" } # 🌐 KMP Compose viewModel()，Compose 屏接 shared ViewModel 时
+kmp-androidx-lifecycle-viewmodel-savedstate = { module = "androidx.lifecycle:lifecycle-viewmodel-savedstate", version.ref = "kmp-androidx-lifecycle" } # 🌐 KMP SavedStateHandle，进程恢复 UI 状态且用 KMP 栈时
 
-
+# --- 网络 OkHttp / Retrofit / Ktor ---
 # https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp-bom
 okhttp-bom = { module = "com.squareup.okhttp3:okhttp-bom", version.ref = "okhttp-bom" }
 okhttp = { module = "com.squareup.okhttp3:okhttp" }
-okhttp-logging = { module = "com.squareup.okhttp3:logging-interceptor" }
+okhttp-logging = { module = "com.squareup.okhttp3:logging-interceptor" } # 📝 OkHttp 请求/响应日志，Debug 抓包、联调接口时（Release 慎开）
 retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
-retrofit-kotlinx-serialization-converter = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "retrofit-kotlinx-serialization-converter" }
+retrofit-kotlinx-serialization-converter = { module = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter", version.ref = "retrofit-kotlinx-serialization-converter" } # 🔗 Retrofit 接 kotlinx-serialization JSON，REST API 用 @Serializable 而非 Gson 时
+ktor-client = { module = "io.ktor:ktor-client-core", version.ref = "ktor" } # 🌐 Ktor 客户端 core，KMP 跨平台 HTTP 或不用 Retrofit 时
+ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" } # 🌐 Ktor 请求日志，Ktor 联调 Debug 时
 
-ktor-client = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
-ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktor" }
-
-#https://insert-koin.io/docs/setup/koin/
+# --- Koin 依赖注入 ---
+# https://insert-koin.io/docs/setup/koin/
 koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koin-bom" }
 koin-core = { module = "io.insert-koin:koin-core" }
-koin-test = { module = "io.insert-koin:koin-test" }
-koin-core-coroutines = { module = "io.insert-koin:koin-core-coroutines" }
+koin-test = { module = "io.insert-koin:koin-test" } # 🧪 单测 mock Koin 模块，JUnit 里 startKoin/stopKoin 时
+koin-core-coroutines = { module = "io.insert-koin:koin-core-coroutines" } # ⚡ Koin + 协程作用域，ViewModelScope/自定义 Scope 异步注入时
 koin-android = { module = "io.insert-koin:koin-android" }
-koin-android-compat = { module = "io.insert-koin:koin-android-compat" }
-koin-android-test = { module = "io.insert-koin:koin-android-test" }
-koin-androidx-navigation = { module = "io.insert-koin:koin-androidx-navigation" }
-koin-androidx-workmanager = { module = "io.insert-koin:koin-androidx-workmanager" }
-koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose" }
-koin-compose = { module = "io.insert-koin:koin-compose" }
-koin-androidx-compose-navigation = { module = "io.insert-koin:koin-androidx-compose-navigation" }
-koin-ktor = { module = "io.insert-koin:koin-ktor" }
+koin-android-compat = { module = "io.insert-koin:koin-android-compat" } # 📱 旧 Support 库兼容桥，极老代码混 androidx 过渡时
+koin-android-test = { module = "io.insert-koin:koin-android-test" } # 🧪 Android 仪器测试启动 Koin，androidTest 注入 fake 实现时
+koin-androidx-navigation = { module = "io.insert-koin:koin-androidx-navigation" } # 🧭 Navigation2 Fragment 作用域注入，View 导航栈共享 ViewModel 时
+koin-androidx-workmanager = { module = "io.insert-koin:koin-androidx-workmanager" } # ⏰ Worker 构造函数注入，WorkManager 任务要用 DI 时
+koin-androidx-compose = { module = "io.insert-koin:koin-androidx-compose" } # 🎨 Compose koinViewModel()，Compose 屏注入 ViewModel 时
+koin-compose = { module = "io.insert-koin:koin-compose" } # 🎨 KMP Compose 注入 API，common Compose 模块用 Koin 时
+koin-androidx-compose-navigation = { module = "io.insert-koin:koin-androidx-compose-navigation" } # 🎨 Compose Navigation 作用域，多 BackStack 共享依赖时
+koin-ktor = { module = "io.insert-koin:koin-ktor" } # 🌐 Ktor 客户端/服务端 DI 集成，Ktor 引擎里 resolve 依赖时
 
+# --- Kotlin / KotlinX ---
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-core-jvm = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm", version.ref = "kotlinx-coroutines" }
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinx-coroutines" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
-kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" }
-#https://github.com/Kotlin/kotlinx-atomicfu
-kotlinx-atomicfu = { module = "org.jetbrains.kotlinx:atomicfu", version.ref = "kotlinx-atomicfu" }
-kotlinx-io = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinx-io" }
-lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" }
-lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinx-datetime" } # 📅 跨平台日期时间 API，KMP 或不想用 java.time 时
+kotlinx-atomicfu = { module = "org.jetbrains.kotlinx:atomicfu", version.ref = "kotlinx-atomicfu" } # ⚛️ 无锁原子变量，高并发库/无锁队列内部实现时
+kotlinx-io = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version.ref = "kotlinx-io" } # 📂 KMP 文件与 Buffer IO，common 读写二进制/文件流时
+lottie = { module = "com.airbnb.android:lottie", version.ref = "lottie" } # 🎬 JSON 矢量动画（View），XML 空态/引导页 LottieAnimationView 时
+lottie-compose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" } # 🎬 Compose Lottie 动画，Compose 加载 .json 动效时
 
+# --- KSP / 测试 / 插件 ---
+ksp-process-api = { module = "com.google.devtools.ksp:symbol-processing-api", version.ref = "google-ksp" } # 🔧 编写 KSP 处理器，自定义注解编译插件时
+ksp-poe = { module = "com.squareup:kotlinpoet-ksp", version.ref = "squareup-poe" } # ✍️ KSP 里生成 Kotlin 源码，注解处理器输出 .kt 时
 test-junit = { module = "junit:junit", version.ref = "junit" }
 test-mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" } # 🪞 Kotlin 反射，运行时扫类/泛型或部分测试框架需要时
+plugin-publish = { group = "com.gradle.plugin-publish", name = "com.gradle.plugin-publish.gradle.plugin", version.ref = "plugin-publish" } # 📤 发布 Gradle 插件到 Plugin Portal，写 convention plugin 工程时
+androidx-test-ext-junit = { module = "androidx.test.ext:junit", version.ref = "androidx-test-ext" } # 🧪 AndroidJUnit4 仪器测试入口，androidTest 跑 UI 测试时
+androidx-test-espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "androidx-test-espresso" } # 🧪 Espresso View 交互断言，传统 View 仪器 UI 测试时
+androidx-test-uiautomator = { module = "androidx.test.uiautomator:uiautomator", version.ref = "androidx-test-uiautomator" } # 🤖 跨 App UI 自动化，Macrobenchmark/E2E 测系统级流程时
+androidx-benchmark-macro-junit4 = { module = "androidx.benchmark:benchmark-macro-junit4", version.ref = "androidx-benchmark" } # ⏱️ 宏基准（冷启动/滑动 FPS），独立 benchmark 模块测性能时
 
-kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
-plugin-publish = { group = "com.gradle.plugin-publish", name = "com.gradle.plugin-publish.gradle.plugin", version.ref = "plugin-publish" }
+# =============================================================================
+# [bundles] 组合依赖说明（用法建议见各 bundle 上方注释）
+#
+# 推荐组合：
+#   Compose 项目  → compose-bom + bundles.compose + bundles.android.basic
+#                 +（按需）compose-more / compose-image / compose-accompanist
+#   传统 View 项目  → android-project 或 android-basic + android-view
+#   网络请求       → okhttp + kotlinx-serialization（basic 已含 serialization）
+#
+# 补充说明（相对 libraries 的缺口，见各 bundle 注释）：
+#   - android-basic 补 AppCompat / DataStore / SavedState / Fragment / serialization
+#   - compose 含 Navigation3 全家桶 + Material3
+#   - compose-more 补 BOM 余量 + paging-compose + google-fonts 等
+#   - 新增 compose-image / compose-accompanist / androidx-paging / hilt
+#   - android-view / android-project 补 Fragment / Emoji2 / Lottie 对齐
+#   - android-optional 补 window / profileinstaller；koin 补 compose-navigation
+#   - 仍不进 bundle：Gene 生态、Media3/Glance/WebKit/ML、KMP 栈、纯 test 依赖
+# =============================================================================
 
 [bundles]
+# 🎨 Compose 基础包：UI 内核 + M3 + Navigation3 + Activity/Lifecycle + 约束布局
+# 与 android-basic 叠加使用
 compose = [
     "androidx-compose-ui",
     "androidx-compose-ui-graphics",
@@ -334,11 +389,10 @@ compose = [
     "androidx-lifecycle-viewmodel-navigation3",
     "androidx-compose-material3-adaptive-navigation3",
     "androidx-compose-constraintlayout",
-    "androidx-annotation",
 ]
 
+# 📚 Compose 扩展包：BOM 内其余库 + 动画/测试/分页（排除 compose / basic 已有）
 compose-more = [
-    "androidx-datastore",
     "androidx-compose-ui-util",
     "androidx-compose-ui-unit",
     "androidx-compose-ui-text",
@@ -347,8 +401,6 @@ compose-more = [
     "androidx-compose-animation",
     "androidx-compose-animation-core",
     "androidx-compose-animation-graphics",
-    "androidx-compose-material",
-    "androidx-compose-material-ripple",
     "androidx-compose-material-icons-extended",
     "androidx-compose-material3-window-size",
     "androidx-compose-ui-viewbinding",
@@ -356,84 +408,117 @@ compose-more = [
     "androidx-compose-ui-tooling-data",
     "androidx-compose-ui-test-junit4",
     "androidx-compose-ui-test-manifest",
+    "androidx-compose-material3-adaptive-navigation-suite",
+    "androidx-compose-ui-text-google-fonts",
+    "androidx-paging-compose",
+]
+
+# 🖼️ Compose 图片与动效：列表头像/封面几乎必备（按需引入，会增大依赖）
+compose-image = [
+    "kmp-coil-compose-android",
+    "lottie-compose",
 ]
 
 compose-optional = [
     # Optional - Add window size utils
     "androidx-compose-material3-window-size",
-    # Optional - Included automatically by material, only add when you need
-    # the icons but not the material library (e.g. when using Material3 or a
-    # custom design system based on Foundation)
-    "androidx-compose-material-icons-core",
-    # Optional - Add full set of material icons
+    # Optional - Add full set of material icons (works with Material3)
     "androidx-compose-material-icons-extended",
 ]
 
+# 🧱 Android 基础包：AppCompat + DataStore + 协程 + Lifecycle + 工程化常用
+# 不含 RecyclerView 等具体控件；Compose / View 项目均可叠加
 android-basic = [
     "androidx-core-ktx",
     "androidx-appcompat",
-    "androidx-fragment-ktx",
     "androidx-activity-ktx",
-    "androidx-core-animation",
+    "androidx-fragment-ktx",
     "androidx-annotation",
+    "androidx-datastore-preferences",
     "androidx-lifecycle-runtime-ktx",
     "androidx-lifecycle-viewmodel-ktx",
+    "androidx-lifecycle-viewmodel-savedstate",
     "kotlinx-coroutines-android",
     "kotlinx-coroutines-core",
+    "kotlinx-serialization-json",
 ]
 
+# 📋 View 常用控件包：Material + 列表/布局/刷新 + Lottie（XML 动效）
 android-view = [
-    "lottie",
-    "androidx-core-ktx",
+    "google-material",
+    "androidx-fragment-ktx",
     "androidx-viewpager2",
     "androidx-recyclerview",
     "androidx-constraintlayout",
     "androidx-swiperefreshlayout",
+    "androidx-emoji2-views",
+    "lottie",
 ]
 
-# https://androidx.tech/artifacts-index
+# 🏗️ 传统 Android 工程一站式：≈ android-basic + android-view + Splash / LiveData
 android-project = [
-    "google-material",
     "androidx-core-ktx",
-    "androidx-appcompat",
-    "androidx-fragment-ktx",
     "androidx-activity-ktx",
+    "androidx-fragment-ktx",
+    "androidx-appcompat",
     "androidx-annotation",
+    "androidx-datastore-preferences",
+    "google-material",
     "androidx-core-splashscreen",
+    "androidx-lifecycle-runtime-ktx",
     "androidx-lifecycle-livedata-ktx",
     "androidx-lifecycle-viewmodel-ktx",
     "androidx-lifecycle-viewmodel-savedstate",
+    "androidx-viewpager2",
+    "androidx-recyclerview",
+    "androidx-constraintlayout",
+    "androidx-swiperefreshlayout",
+    "androidx-emoji2-views",
+    "lottie",
     "kotlinx-coroutines-core",
     "kotlinx-coroutines-android",
+    "kotlinx-serialization-json",
 ]
 
+# 🔌 按需引入：不默认打进 basic，避免全项目被动依赖
 android-optional = [
+    "androidx-window",
     "androidx-window-ext",
     "androidx-palette-ktx",
     "androidx-datastore",
     "androidx-preference-ktx",
     "androidx-work-runtime-ktx",
     "androidx-collection-ktx",
-    "androidx-datastore-preferences",
+    "androidx-profileinstaller",
     "kotlinx-io",
     "kotlinx-datetime",
     "kotlinx-atomicfu",
-    "kotlinx-coroutines-core",
-    "kotlinx-serialization-json",
+]
+
+# 📄 View 体系分页（RecyclerView + Paging3）
+androidx-paging = [
+    "androidx-paging-common-ktx",
+    "androidx-paging-runtime-ktx",
 ]
 
 androidx-room = [
     "androidx-room-runtime",
     "androidx-room-ktx",
-    "androidx-room-paging"
+    "androidx-room-paging",
 ]
 
-#https://developer.android.google.cn/studio/profile/benchmark?hl=zh-cn
+# 💉 Hilt 依赖注入（compiler 仍用 ksp/hilt 插件单独声明）
+hilt = [
+    "google-dagger-hilt-android",
+    "google-dagger-hilt-core",
+]
+
+# https://developer.android.google.cn/studio/profile/benchmark?hl=zh-cn
 androidx-benchmark = [
     "androidx-test-ext-junit",
     "androidx-test-espresso-core",
     "androidx-test-uiautomator",
-    "androidx-benchmark-macro-junit4"
+    "androidx-benchmark-macro-junit4",
 ]
 
 okhttp = ["okhttp-logging", "okhttp", "retrofit", "retrofit-kotlinx-serialization-converter"]
@@ -442,14 +527,23 @@ koin = [
     "koin-android",
     "koin-android-compat",
     "koin-androidx-compose",
+    "koin-androidx-compose-navigation",
     "koin-androidx-workmanager",
     "koin-compose",
     "koin-ktor",
     "koin-core-coroutines",
-    "koin-core"
+    "koin-core",
 ]
 
 ktor = ["ktor-client", "ktor-client-logging"]
+
+# 🎨 Compose 常用 Accompanist（按需引入；全量见 android-accompanist）
+compose-accompanist = [
+    "google-accompanist-permissions",
+    "google-accompanist-systemuicontroller",
+    "google-accompanist-placeholder-material",
+    "google-accompanist-drawablepainter",
+]
 
 # https://juejin.cn/post/6970605080328765453
 android-accompanist = [
