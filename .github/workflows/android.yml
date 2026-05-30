@@ -30,5 +30,7 @@ jobs:
           chmod +x ./gradlew
       - name: 💪 publishVcatalogPublicationToJuneLocalRepository
         run: ./gradlew publishVcatalogPublicationToJuneLocalRepository
+      - name: 🧬
+        run: ./gradlew :check:app:assembleDebug
       - run: echo "💡  succeed."
 
