@@ -281,10 +281,15 @@ google-auto-service-anno = { module = "com.google.auto.service:auto-service-anno
 google-dagger-hilt-core = { module = "com.google.dagger:hilt-core", version.ref = "google-hilt" } # 💉 Hilt 核心（非 Android），纯 JVM 模块或测试共用 DI 时
 google-dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "google-hilt" } # 💉 Hilt Android 运行时，Activity/Application 注入选 Hilt 时
 google-dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "google-hilt" } # 💉 Hilt 注解处理器，ksp/hilt 插件生成组件时
-protobuf-kotlin = { module = "com.google.protobuf:protobuf-kotlin", version.ref = "google-protobuf" } # 📦 Protobuf Kotlin 生成类，gRPC/本地 .proto 序列化且用 kotlin  DSL 时
+
+# protobuf-kotlin 内部会依赖 protobuf-java,  protobuf-kotlin-lite 内部会依赖 protobuf-javalite
+protobuf-kotlin-lite = { module = "com.google.protobuf:protobuf-kotlin-lite", version.ref = "google-protobuf" } # 📦 Protobuf Kotlin 生成类，gRPC/本地 .proto 序列化且用 kotlin  DSL 时
+# protobuf-java 是标准版（全功能，适用于服务器端、桌面应用等标准 JVM 环境），而 protobuf-javalite 是专为移动端等受限环境设计的轻量精简版
 protobuf-javalite = { module = "com.google.protobuf:protobuf-javalite", version.ref = "google-protobuf" } # 📦 Protobuf Kotlin 生成类，gRPC/本地 .proto 序列化且用 kotlin  DSL 时
+# 内部会依赖 protobuf-javalite
 mediapipe-vision = { module = "com.google.mediapipe:tasks-vision", version.ref = "mediapipe-vision" } # 👁️ 端侧视觉 Pipeline（检测/手势/分割），相机实时 AI 且要 MediaPipe 方案时
 mlkit-segmentation = { module = "com.google.mlkit:segmentation-selfie", version.ref = "mlkit-segmentation" } # ✂️ ML Kit 人像分割，抠图、背景虚化、贴纸换背景时
+
 google-accompanist-drawablepainter = { module = "com.google.accompanist:accompanist-drawablepainter", version.ref = "google-accompanist-drawablepainter" } # 🖼️ Compose 加载 VectorDrawable/AnimatedVectorDrawable，复用 XML 矢量资源时
 google-accompanist-flowlayout = { module = "com.google.accompanist:accompanist-flowlayout", version.ref = "google-accompanist-flowlayout" } # 🏷️ 流式/标签云布局，筛选项、关键词换行排列时（官方 FlowRow 未覆盖的遗留场景）
 google-accompanist-insets = { module = "com.google.accompanist:accompanist-insets", version.ref = "google-accompanist-insets" } # 📏 Compose 系统栏 Insets 适配，快速处理 statusBar/navBar padding 时

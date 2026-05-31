@@ -157,7 +157,7 @@ dependencies {
     implementation(vcl.google.dagger.hilt.core)
     implementation(vcl.google.dagger.hilt.android)
     ksp(vcl.google.dagger.hilt.compiler)
-    implementation(vcl.protobuf.kotlin)
+    implementation(vcl.protobuf.kotlin.lite)
     implementation(vcl.protobuf.javalite)
     implementation(vcl.mediapipe.vision)
     implementation(vcl.mlkit.segmentation)
