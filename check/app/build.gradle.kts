@@ -108,7 +108,7 @@ dependencies {
     implementation(vcl.androidx.paging.compose)
 
     // --- Compose BOM ---
-    platform(vcl.androidx.compose.bom)
+    implementation(platform(vcl.androidx.compose.bom))
     implementation(vcl.androidx.compose.ui)
     implementation(vcl.androidx.compose.ui.util)
     implementation(vcl.androidx.compose.ui.unit)
@@ -187,14 +187,14 @@ dependencies {
     implementation(vcl.kmp.androidx.lifecycle.viewmodel.savedstate)
 
     // --- OkHttp / Retrofit ---
-    platform(vcl.okhttp.bom)
+    implementation(platform(vcl.okhttp.bom))
     implementation(vcl.okhttp)
     implementation(vcl.okhttp.logging)
     implementation(vcl.retrofit)
     implementation(vcl.retrofit.kotlinx.serialization.converter)
 
     // --- Ktor ---
-    platform(vcl.ktor.bom)
+    implementation(platform(vcl.ktor.bom))
     implementation(vcl.ktor.client)
     implementation(vcl.ktor.client.logging)
     implementation(vcl.ktor.client.content.negotiation)
@@ -208,7 +208,7 @@ dependencies {
     implementation(vcl.ktor.client.cio)
 
     // --- Koin ---
-    platform(vcl.koin.bom)
+    implementation(platform(vcl.koin.bom))
     implementation(vcl.koin.core)
     testImplementation(vcl.koin.test)
     implementation(vcl.koin.core.coroutines)
