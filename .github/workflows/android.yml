@@ -30,7 +30,7 @@ jobs:
           chmod +x ./gradlew
       - name: 💪 publishVcatalogPublicationToJuneLocalRepository
         run: ./gradlew publishVcatalogPublicationToJuneLocalRepository
-      - name: 🧐 dependencyInsight
+      - name: 🧐 dependency
         run: |
           echo -e "维度\t\tdependencies\t\t\tdependencyInsight"
           echo -e "-----------------------------------------------------------------------------------"
@@ -38,9 +38,11 @@ jobs:
           echo -e "作用\t\t打印所有依赖树\t\t\t深度追踪特定库的来源与版本裁决"
           echo -e "适用场景\t了解项目整体依赖结构\t\t排查版本冲突、寻找重复类的引入者"
           echo -e "输出特点\t庞大完整的树状图\t\t只展示目标库的详细解析路径和原因\n"
+          echo -e "-----------------------------------------------------------------------------------"
           echo -e "在实际开发中，我们通常会按照“先宏观后微观”的顺序来排查问题："
           echo -e "第一步（大海捞针）：先用 dependencies 扫一眼全貌，或者配合搜索（如 grep / Select-String）快速定位是哪个大库可能引入了冲突的依赖。"
           echo -e "第二步（精准打击）：一旦怀疑某个具体的库（比如 protobuf-java），立刻切换到 dependencyInsight，传入该库的名字，让它把底细交代得清清楚楚。"
+          echo -e "-----------------------------------------------------------------------------------"
           ./gradlew :check:app:dependencyInsight --dependency protobuf-java --configuration debugCompileClasspath
           ./gradlew :check:app:dependencies
       - name: 🧬

@@ -2,6 +2,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(vcl.plugins.android.application)
+    alias(vcl.plugins.gene.android)
 //    alias(vcl.plugins.compose.compiler)
     alias(vcl.plugins.ksp)
 //    alias(vcl.plugins.hilt)
@@ -11,17 +12,7 @@ plugins {
 
 android {
     namespace = "com.checker"
-    compileSdk = 35
 
-    defaultConfig {
-        minSdk = 24
-        //noinspection EditedTargetSdkVersion
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
 
     buildTypes {
         release {
