@@ -30,6 +30,8 @@ jobs:
           chmod +x ./gradlew
       - name: 💪 publishVcatalogPublicationToJuneLocalRepository
         run: ./gradlew publishVcatalogPublicationToJuneLocalRepository
+      - name: 🧐 dependencyInsight
+        run: ./gradlew :check:app:dependencyInsight --dependency protobuf-java --configuration debugCompileClasspath
       - name: 🧬
         run: ./gradlew :check:app:assembleDebug
       - run: echo "💡  succeed."
