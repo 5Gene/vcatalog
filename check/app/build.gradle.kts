@@ -204,7 +204,6 @@ dependencies {
     implementation(vcl.ktor.client.encoding)
     implementation(vcl.ktor.client.websockets)
     implementation(vcl.ktor.client.okhttp)
-    implementation(vcl.ktor.client.darwin)
     implementation(vcl.ktor.client.cio)
 
     // --- Koin ---
