@@ -33,9 +33,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    buildFeatures {
-        compose = true
-    }
+//    buildFeatures {
+//        compose = true
+//    }
     kotlin {
         compilerOptions {
             jvmTarget = JvmTarget.fromTarget("17")
