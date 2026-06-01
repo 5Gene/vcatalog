@@ -60,7 +60,7 @@ class VCatalogPlugin : Plugin<Settings> {
         //拿到所有仓库
         //val repositories = this.toList()
         if (size > 1) {
-            val removeLast = removeLast()
+            val removeLast = removeAt(lastIndex)
             addFirst(removeLast)
         }
     }
@@ -82,7 +82,6 @@ class VCatalogPlugin : Plugin<Settings> {
                     }
                 }
             }
-
         }
     }
 
