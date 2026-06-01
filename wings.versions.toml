@@ -21,7 +21,7 @@
 
 [versions]
 # --- Gene 生态 ---
-gene-conventions = "2026.05.26"
+gene-conventions = "2026.06.01"
 gene-cartoon = "1.1"
 gene-cubic = "1.0"
 gene-view-dsl = "1.2"
@@ -117,6 +117,7 @@ google-accompanist-swiperefresh = "0.36.0"
 google-accompanist-systemuicontroller = "0.36.0"
 google-accompanist-webview = "0.36.0"
 # https://mvnrepository.com/artifact/com.google.mediapipe/tasks-vision
+# 不用升级到 0.20230731 = 2023.07.31 是旧版本
 mediapipe-vision = "0.10.35"
 mlkit-segmentation = "16.0.0-beta6"
 
@@ -268,10 +269,68 @@ androidx-graphics-path = { module = "androidx.graphics:graphics-path", version.r
 androidx-graphics-core = { module = "androidx.graphics:graphics-core", version.ref = "androidx-graphics-core" } # 🔷 基础组件。提供最底层的图形原语，如 Bitmap、Canvas 和 Paint 的扩展功能，是后两者的基础运行环境
 
 # --- AndroidX Media3 / Glance ---
-androidx-media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "androidx-media3" } # ▶️ 音视频播放内核，点播/直播、本地媒体播放模块时
+# =================================================================
+# 【核心发动机】—— 不管做什么多媒体功能，这个库都是必须引入的基础
+# =================================================================
+# 核心播放器，负责音视频的加载、解码、缓冲和播放控制
+androidx-media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "androidx-media3" }
+
+# =================================================================
+# 【播放界面 UI】—— 决定在手机屏幕上如何看到视频画面和进度条
+# =================================================================
+# 传统 XML 布局必备：提供写好的视频播放窗口（PlayerView）和自带的播放/暂停/进度条面板
+androidx-media3-ui = { module = "androidx.media3:media3-ui", version.ref = "androidx-media3" }
+# Jetpack Compose 必备：如果你的 App 界面是用 Compose 写的，必须用它才能把视频画面显示出来
+androidx-media3-ui-compose = { module = "androidx.media3:media3-ui-compose", version.ref = "androidx-media3" }
+# Compose 高级皮肤：配合上面那个使用，能让 Compose 的播放控制条拥有最新的 Material 3 漂亮外观，▶️ M3 风格 Compose 播放器 UI
+androidx-media3-ui-compose-material3 = { module = "androidx.media3:media3-ui-compose-material3", version.ref = "androidx-media3" }
+
+# =================================================================
+# 【视频剪辑与画面特效】—— 适合做短视频制作、剪辑工具
+# =================================================================
+# 视频转码导出：用于把视频裁剪长度、压缩大小、或者把用户录制的视频转成标准的 MP4 文件上传
+androidx-media3-transformer = { module = "androidx.media3:media3-transformer", version.ref = "androidx-media3" }
+# 画面滤镜：在视频播放或导出时，实时给画面加上滤镜（如黑白、复古）、裁剪画面或叠加热点文字水印
+androidx-media3-effect = { module = "androidx.media3:media3-effect", version.ref = "androidx-media3" }
+# 动态动画贴纸：配合上面的滤镜库，可以在视频画面上叠加炫酷的 Lottie 动态动画贴纸
+androidx-media3-effect-lottie = { module = "androidx.media3:media3-effect-lottie", version.ref = "androidx-media3" }
+
+# =================================================================
+# 【特殊网络视频格式】—— 如果你要播网络直播或特定格式，按需引入
+# =================================================================
+# 用于播放 HLS 格式的网络视频或直播流（链接通常以 .m3u8 结尾）
+androidx-media3-exoplayer-hls = { module = "androidx.media3:media3-exoplayer-hls", version.ref = "androidx-media3" }
+# 用于播放 DASH 自适应网络视频（很多国外高级视频网站、动态多码率视频使用）
+androidx-media3-exoplayer-dash = { module = "androidx.media3:media3-exoplayer-dash", version.ref = "androidx-media3" }
+# 用于连接安防摄像头、监控、行车记录仪（链接通常以 rtsp:// 开头）
+androidx-media3-exoplayer-rtsp = { module = "androidx.media3:media3-exoplayer-rtsp", version.ref = "androidx-media3" }
+# 很少用：用于播放微软旧版的 SmoothStreaming 平滑流媒体视频
+androidx-media3-exoplayer-smoothstreaming = { module = "androidx.media3:media3-exoplayer-smoothstreaming", version.ref = "androidx-media3" }
+# 很少用：用于让播放器识别并播放纯电子乐谱、MIDI 音乐文件（.mid）
+androidx-media3-exoplayer-midi = { module = "androidx.media3:media3-exoplayer-midi", version.ref = "androidx-media3" }
+
+# =================================================================
+# 【后台听歌与智能投屏】—— 适合音乐类、长视频类 App
+# =================================================================
+# 后台播放核心：做音乐/播客 App 必备！让 App 切到后台或锁屏时继续响，并在手机通知栏显示切歌/暂停面板
+androidx-media3-session = { module = "androidx.media3:media3-session", version.ref = "androidx-media3" }
+# 电视投屏：在 App 里做一个按钮，允许用户把手机上的视频一键投放到家里的智能电视上播放
+androidx-media3-cast = { module = "androidx.media3:media3-cast", version.ref = "androidx-media3" }
+
+# =================================================================
+# 【高级定制与网络优化】—— 小白初期可以先不管，底层会自动调用
+# =================================================================
+# 网络请求共用：如果你的 App 已经配置了 OkHttp 拦截器（如加 Token 鉴权、统计流量），让视频下载也走 OkHttp
+androidx-media3-datasource-okhttp = { module = "androidx.media3:media3-datasource-okhttp", version.ref = "androidx-media3" }
+
+# 以下是 Media3 的基础底层组件，ExoPlayer 内部会自动加载它们，你基本不需要手动写在 build.gradle 里面：
 androidx-media3-common = { module = "androidx.media3:media3-common", version.ref = "androidx-media3" } # ▶️ Media3 公共类型与配置，自定义 Player/TrackSelector 时
-androidx-media3-ui = { module = "androidx.media3:media3-ui", version.ref = "androidx-media3" } # ▶️ 传统 View 播放器控件（PlayerView），非 Compose 播放页时
-androidx-media3-ui-compose-material3 = { module = "androidx.media3:media3-ui-compose-material3", version.ref = "androidx-media3" } # ▶️ M3 风格 Compose 播放器 UI，Compose 视频页时
+androidx-media3-datasource = { module = "androidx.media3:media3-datasource", version.ref = "androidx-media3" }
+androidx-media3-container = { module = "androidx.media3:media3-container", version.ref = "androidx-media3" }
+androidx-media3-extractor = { module = "androidx.media3:media3-extractor", version.ref = "androidx-media3" }
+androidx-media3-decoder = { module = "androidx.media3:media3-decoder", version.ref = "androidx-media3" }
+androidx-media3-database = { module = "androidx.media3:media3-database", version.ref = "androidx-media3" }
+
 androidx-glance-appwidget = { module = "androidx.glance:glance-appwidget", version.ref = "androidx-glance" } # 🏠 Glance 桌面小组件，开发 App Widget（非 RemoteViews XML）时
 androidx-glance-material3 = { module = "androidx.glance:glance-material3", version.ref = "androidx-glance" } # 🏠 Glance M3 主题组件，小组件要跟 App M3 配色一致时
 

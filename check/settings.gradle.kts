@@ -20,6 +20,8 @@ dependencyResolutionManagement {
     versionCatalogs {
         create("vcl") {
             from(files("../wings.versions.toml"))
+            // 覆盖 TOML 文件中声明的 版本
+            version("gene-conventions", "2026.06.01")
         }
     }
 }

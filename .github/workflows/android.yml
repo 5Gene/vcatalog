@@ -45,6 +45,7 @@ jobs:
           echo -e "-----------------------------------------------------------------------------------"
           ./gradlew :check:app:dependencyInsight --dependency protobuf-java --configuration debugCompileClasspath
           ./gradlew :check:app:dependencies
+          ./gradlew updateVersionCatalog
       - name: 🧬
         run: ./gradlew :check:app:assembleDebug
       - run: echo "💡  succeed."
