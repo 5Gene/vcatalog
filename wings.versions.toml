@@ -21,7 +21,7 @@
 
 [versions]
 # --- Gene 生态 ---
-gene-conventions = "2026.06.01"
+gene-conventions = "2026.09.06"
 gene-cartoon = "1.1"
 gene-cubic = "1.0"
 gene-view-dsl = "1.2"
@@ -131,6 +131,7 @@ koin-bom = "4.2.2"
 ktor = "3.5.2"
 lottie = "6.7.1"
 lottie-compose = "6.7.1"
+tomlj = "1.1.1"
 
 # --- Jetpack KMP ---
 kmp-androidx-collection = "1.6.0"
@@ -401,6 +402,7 @@ ktor-client-websockets = { module = "io.ktor:ktor-client-websockets" } # 🔌 We
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp" } # 🤖 Android/JVM OkHttp 引擎，androidMain 接 Ktor 网络栈时
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin" } # 🍎 iOS/macOS NSURLSession 引擎，iosMain 接 Ktor 时
 ktor-client-cio = { module = "io.ktor:ktor-client-cio" } # ⚙️ CIO 跨平台引擎，JVM/Native/Linux 或不想用 OkHttp 时
+tomlj = { module = "org.tomlj:tomlj", version.ref = "tomlj" }
 # ktor-bom end >>>>>>>>>>>>
 
 # --- Koin 依赖注入 ---
