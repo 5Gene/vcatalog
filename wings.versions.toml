@@ -105,7 +105,7 @@ kotlinx-io = "0.9.1"
 google-auto-service-anno = "1.1.1"
 google-material = "1.14.0"
 google-hilt = "2.60.1" # Hilt Gradle 插件版本，与 hilt-android 对齐
-google-protobuf = "4.36.0"
+google-protobuf = "4.36.1"
 google-accompanist-drawablepainter = "0.37.3"
 google-accompanist-permissions = "0.37.3"
 google-accompanist-flowlayout = "0.36.0"
@@ -118,7 +118,7 @@ google-accompanist-systemuicontroller = "0.36.0"
 google-accompanist-webview = "0.36.0"
 # https://mvnrepository.com/artifact/com.google.mediapipe/tasks-vision
 # 不用升级到 0.20230731 = 2023.07.31 是旧版本
-mediapipe-vision = "0.10.35"
+mediapipe-vision = "1.0.0"
 mlkit-segmentation = "16.0.0-beta6"
 
 # --- 网络 / DI / 动画 ---
@@ -137,12 +137,12 @@ kmp-androidx-collection = "1.6.0"
 kmp-androidx-annotation = "1.10.0"
 kmp-androidx-datastore = "1.2.1"
 kmp-androidx-paging = "3.5.1" # 与 androidx-paging 版本对齐；artifact 为 paging-common
-kmp-coil-compose = "3.6.0"
-kmp-coil-compose-android = "3.6.0"
+kmp-coil-compose = "3.6.2"
+kmp-coil-compose-android = "3.6.2"
 
 # --- Gradle 插件 / 发布 ---
 # https://developer.android.com/build/releases/gradle-plugin
-android-gradle-plugin = "9.2.1"
+android-gradle-plugin = "9.4.0"
 protobuf-plugin = "0.10.0"
 plugin-publish = "2.1.1"
 kotlin-dsl = "6.7.0"
