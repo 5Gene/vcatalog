@@ -2,12 +2,16 @@
 .gradle/
 build/
 .*/
+# .*/ 会误伤 .github；显式放行 workflows，否则新 Action 无法入库
+!.github/
+!.github/**
 
 # Local configuration file (sdk path, etc)
 local.properties
 
 # Log/OS Files
 *.log
+.DS_Store
 
 # Android Studio generated files and folders
 captures/
