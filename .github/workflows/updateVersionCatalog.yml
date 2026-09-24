@@ -10,6 +10,11 @@ concurrency:
   group: update-version-catalog
   cancel-in-progress: false
 
+permissions:
+  contents: write        # 允许推 commit / tag  
+  pull-requests: write   # 如需创建/更新 PR   
+  packages: write        # 如需推送包
+
 jobs:
   update:
     runs-on: ubuntu-latest
