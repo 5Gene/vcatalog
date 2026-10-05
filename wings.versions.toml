@@ -131,7 +131,7 @@ koin-bom = "4.2.2"
 ktor = "3.6.0"
 lottie = "6.7.1"
 lottie-compose = "6.7.1"
-tomlj = "2.1.1"
+tomlj = "2.2.0"
 
 # --- Jetpack KMP ---
 kmp-androidx-collection = "1.6.0"
