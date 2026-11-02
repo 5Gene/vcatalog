@@ -93,13 +93,13 @@ androidx-test-uiautomator = "2.4.0"
 
 # --- Kotlin / KotlinX ---
 kotlin = "2.4.21" # 必须同时修改对应的 ksp 版本
-google-ksp = "2.3.12"
+google-ksp = "2.3.13"
 # https://github.com/google/ksp/releases/
 kotlinx-coroutines = "1.11.0"
 kotlinx-serialization = "1.12.0"
 kotlinx-datetime = "0.8.0"
 kotlinx-atomicfu = "0.33.0"
-kotlinx-io = "0.9.1"
+kotlinx-io = "0.9.2"
 
 # --- Google Material / Accompanist / DI / Protobuf / ML ---
 google-auto-service-anno = "1.1.1"
@@ -128,7 +128,7 @@ retrofit = "3.0.0"
 retrofit-kotlinx-serialization-converter = "1.0.0"
 koin-bom = "4.2.2"
 # https://ktor.io/docs/client-dependencies.html
-ktor = "3.6.0"
+ktor = "3.6.1"
 lottie = "6.7.1"
 lottie-compose = "6.7.1"
 tomlj = "2.2.0"
